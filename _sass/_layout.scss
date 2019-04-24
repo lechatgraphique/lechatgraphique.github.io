@@ -1,0 +1,136 @@
+html {
+    font-family: 'Roboto', monospace;
+    margin:0 20px;
+    font-size: 18px;
+    line-height: 1.8rem;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: $text-white;
+    color: $text-primary;
+    .content {
+        flex: 1;
+    }
+}
+
+a {
+   color: $text-link;
+   text-decoration: none; 
+   &:hover {
+    text-decoration: underline;
+   }
+}
+
+@media only screen and (min-width: 880px) {
+    body {
+      width: 880px;
+      margin: 0 auto;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.posts {
+    margin: 50px 0;
+    h2 {
+        font-weight: 400;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-bottom: 2px solid #f8f8f8;
+        border-radius: 2px;
+        text-decoration: none;
+        .post-thumbnail {
+            width: 35px;
+            margin-right: 1.3rem;
+            img {
+                display: block;
+            }
+        }
+        .post-title {
+            flex: 2;
+            color: $text-primary;
+            font-weight: 400;
+        }
+        .post-date {
+            font-size: .8rem;
+            color: $text-grey;
+            font-weight: 200;
+            text-align: right;
+            .categories {
+                span {
+                    font-size: .7rem;
+                    padding: .3rem;
+                    background-color: $text-light-grey;
+                }
+            }
+        }
+    }
+    a:hover {
+        background:#f8f8f8;
+        border-radius: 2px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    a {
+        flex-direction: column;
+        .post-thumbnail {
+            width: 35px;
+            margin-left: 1.3rem;
+            img {
+                display: block;
+            }
+        }
+    }
+}
+
+.heading-post {
+    h2 {
+        margin: 0;
+        color: $text-primary;
+    }
+    time {
+        font-size: .8rem;
+        margin: 0 0 10px 0;
+        color: $text-grey;
+    }
+}
+.post-nav-next {
+    text-align: right;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 10px;
+    font-size: .7rem;
+    div {
+        font-weight: 200;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+        img {
+            display: inline;
+            padding: 0 5px;    
+        }
+    }
+}

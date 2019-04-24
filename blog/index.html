@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+<div class="list-post">
+    <a href="{{ post.url }}">
+        <div>{{ post.numberList}}</div>
+        <div>{{ post.date | date: " %-d/%m/%y" }} | {{ post.title }} ↝</div>
+    </a>
+</div>
+{% endfor %}

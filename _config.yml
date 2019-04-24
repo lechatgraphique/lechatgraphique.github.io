@@ -1,0 +1,29 @@
+title: RocketDev • Blog developer 
+email: info@lechatgraphique.fr
+description: >- 
+  À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). 
+baseurl: ""
+url: ""
+github_username:  lechatgraphique
+permalink: /:categories/:title
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  
+sass:
+  sass_dir: _sass
+  style: compact
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

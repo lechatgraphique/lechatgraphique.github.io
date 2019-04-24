@@ -1,0 +1,42 @@
+.newsletter {
+    margin-top: 1rem; 
+    padding: 1rem;
+    background-color: $text-light-grey;
+    border-radius: 2px;
+
+    h2 {
+        margin: 0;
+        font-weight: 400;
+    }
+    form {
+        display: flex;
+        justify-items: center;
+        input[type="email"] {
+            flex: 2;
+            padding: 1rem;
+            border: 0;
+            outline: none;
+            color: $text-primary;
+            font-weight: 200;
+            background-color: $bg-white;
+        }
+        input[type="submit"] {
+            background-color: #4B86E8;  
+            border: none;
+            padding: 1rem;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            transition: transform 0.75s ease, background 0.35s ease;
+            &:hover {
+                background: #2A6AC8;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    form {
+      flex-direction: column;
+    }
+}

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="post">
+    <div class="heading-post">
+            <img class="thumb" src="{{ site.url }}/{{ page.image }}" alt="{{ page.title }}" width="75" height="75">
+        <h2 class="post-title">{{ page.title }}</h2>
+        {% assign m = page.date | date: "%-m" %}
+        <time class="post-date" datetime="{{ page.date | date_to_rfc822 }}">
+            Publié le {{ page.date | date: "%d" }} 
+            {% case m %}
+                {% when '1' %}janvier
+                {% when '2' %}février
+                {% when '3' %}mars
+                {% when '4' %}avril
+                {% when '5' %}mai
+                {% when '6' %}juin
+                {% when '7' %}juillet
+                {% when '8' %}août
+                {% when '9' %}septembre
+                {% when '10' %}octobre
+                {% when '11' %}novembre
+                {% when '12' %}décembre
+            {% endcase %} {{ page.date | date: "%Y" }}
+        </time>
+    </div>
+    <div style="text-align:justify;">
+        {{ content }}
+    </div>
+    <div class="post-nav">
+        <div>
+            {% if page.previous.url %}
+            <a href="{{page.previous.url}}">&laquo;&nbsp;Précédent</a>
+            {% endif %}
+        </div>
+        <div class="post-nav-next">
+            {% if page.next.url %}
+            <a href="{{page.next.url}}">Suivant&nbsp;&raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+

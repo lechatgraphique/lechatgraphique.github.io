@@ -1,0 +1,49 @@
+---
+layout: default
+permalink : /
+---
+
+<section>
+    <p style="text-align:justify;">
+    <strong>Bonjour,</strong> <br>
+        Je me présente, je m'appelle <strong>Bastien</strong>. Je suis <strong>freelance Graphiste Print</strong> & <strong>Ui designer</strong> depuis 8 ans et je vis en région parienne. 
+        À travers ce blog je souhaite partager mon nouveau défi, <strong>devir développeur d’applications web (back end)</strong>.
+    </p>
+    <a class="github-button" href="https://github.com/lechatgraphique" data-size="large" data-show-count="true" aria-label="Follow @bclement on GitHub">Suivre :)</a>
+</section>
+
+<section class="posts">
+    {% for blog in site.posts limit:5 %}
+    <a href="{{ blog.url }}" class="post">
+        <div class="post-thumbnail">
+            <img src="{{ site.baseurl }}{{ blog.image }}" alt="Icon">
+        </div>
+        <div class="post-title">
+            {{ blog.title }}
+        </div>
+        <div class="post-date">
+            <time>
+                {% assign m = blog.date | date: "%-m" %}
+                {{ blog.date | date: "%-d" }}
+                {% case m %}
+                {% when '1' %}Janvier
+                {% when '2' %}Février
+                {% when '3' %}Mars
+                {% when '4' %}Avril
+                {% when '5' %}Mai
+                {% when '6' %}Juin
+                {% when '7' %}Juillet
+                {% when '8' %}Août
+                {% when '9' %}Septembre
+                {% when '10' %}Octobre
+                {% when '11' %}Novembre
+                {% when '12' %}Décembre
+                {% endcase %}
+                {{ blog.date | date: "%Y" }}
+            </time>
+        </div>
+    </a>
+    {% endfor %}
+</section>
+
+{% include newsletter.html %}
