@@ -31,4 +31,4 @@ La chose intéressante avec **OpenClassRooms** c’est le **système de parcours
 
 Vous pouvez également me suivre sur mon [Instagram](https://www.instagram.com/bc_lechatgraphique/).
 
-Je vous dis à très vite pour la suite des épisodes de **newlife’of’developer**.
+Je vous dis à très vite pour la suite des épisodes.
