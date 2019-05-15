@@ -20,7 +20,7 @@ Je m’appelle **Bastien Clement**. Je suis basé en région parisienne et je tr
 
 
 #### Pourquoi je choisis PHP et non pas un autre langage de programmation ?
-Même si beaucoup diront que [PHP c’est de la merde](https://www.youtube.com/watch?v=US9JCsnAVTU) et qu’il faut se tourner sur de nouvelles technologies telles que **JavaScript, Mode JS, Python…** ce qui peut-être très intéressant me direz-vous. Mais dans mon cas je souhaite pouvoir répondre au mieux à mes clients et futurs clients qui sont en règle général sur **PHP**. Puis j’aime bien ce petit éléphant bleu… il mérite d’être appris.
+Même si beaucoup diront que [PHP c’est de la merde](https://www.youtube.com/watch?v=US9JCsnAVTU) et qu’il faut se tourner sur de nouvelles technologies telles que **JavaScript, Node JS, Python…** ce qui peut-être très intéressant me direz-vous. Mais dans mon cas je souhaite pouvoir répondre au mieux à mes clients et futurs clients qui sont en règle général sur **PHP**. Puis j’aime bien ce petit éléphant bleu… il mérite d’être appris.
 
 De plus **PHP** reste extrêmement présent sur la toile et je pense pour un long moment encore. Avec la version de **PHP 7** on retrouve une bien **meilleure structure du code**. Pour cette raison que je souhaite commencer par **PHP** avec **Symfony**. 
 
