@@ -22,7 +22,7 @@ Cette série de tutos a pour but de vous montrer étape par étape l’installat
 - **Série 2** : Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS
 - **Série 3** : Sécuriser Nginx avec Let’s Encrypt (SSL) sur Ubuntu 18.04 LTS
 - **Série 4** : Créer une base de données MySQL avec RDS
-- **Série 5** : Installer WordPress sur votre instance EC2
+- **Série 5** : Installer WordPress sur notre instance EC2
 
 Je mettrais à jour les liens du sommaire au fur et à mesure.
 
