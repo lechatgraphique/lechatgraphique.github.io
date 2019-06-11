@@ -15,13 +15,13 @@ Nous allons voir ensemble comment installer et configurer un serveur « LEMP �
 
 **L’acronyme « LEMP »** décrit un système d’exploitation Linux, avec un serveur web Nginx, une base de données MySQL externe (RDS)  et le traitement dynamique des pages gérées par PHP.
 
-Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé avec WordPress. 
+Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress avec les services AWS. 
 
 ## Sommaire
 - **Série 1** : Créer un compte Amazon Serveur (AWS)
 - **Série 2** : Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS
 - **Série 3** : Sécuriser Nginx avec Let’s Encrypt (SSL) sur Ubuntu 18.04 LTS
-- **Série 4** : Créer à une base de données MySQL avec RDS
+- **Série 4** : Créer une base de données MySQL avec RDS
 - **Série 5** : Installer WordPress sur votre instance EC2
 
 Je mettrais à jour les liens du sommaire au fur et à mesure.
