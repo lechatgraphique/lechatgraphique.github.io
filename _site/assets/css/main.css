@@ -128,7 +128,8 @@ header { display: flex; align-items: center; justify-content: center; margin: 30
 .posts a .post-date .categories span { font-size: .7rem; padding: .3rem; background-color: #E5E9EE; }
 .posts a:hover { background: #f8f8f8; border-radius: 2px; }
 
-@media only screen and (max-width: 500px) { a { flex-direction: column; }
+@media only screen and (max-width: 500px) { .posts { text-align: center; }
+  a { flex-direction: column; }
   a .post-thumbnail { width: 35px; margin-left: 1.3rem; }
   a .post-thumbnail img { display: block; } }
 .heading-post h2 { margin: 0; color: #23263B; }
