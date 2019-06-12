@@ -8,7 +8,7 @@ description: "Nous allons voir ensemble comment installer et configurer un serve
 Linux, Nginx, MySQL, PHP avec les services AWS."
 ---
 # Introduction 
-Nous allons voir ensemble comment installer et configurer un serveur « LEMP »  `Linux`, `Nginx`, `MySQL`, `PHP` avec les Amazon Web Services. 
+Nous allons voir ensemble comment installer et configurer un serveur **« LEMP »**  `Linux`, `Nginx`, `MySQL`, `PHP` avec les Amazon Web Services. 
 
 - [Amazon Elastic Compute Cloud (Amazon EC2)](https://aws.amazon.com/fr/ec2/)
 - [Amazon Relational Database Service (Amazon RDS)](https://aws.amazon.com/fr/rds/)
@@ -26,7 +26,7 @@ Cette série de tutos a pour but de vous montrer étape par étape l’installat
 
 Je mettrais à jour les liens du sommaire au fur et à mesure.
 
-Je vous recommande cepandant de lire le cours OpenClassRooms : [« Découvrez le cloud avec Amazon Web Services »](https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services) de Mathieu Nebra.
+Je vous recommande cepandant de lire le cours **OpenClassRooms** : [« Découvrez le cloud avec Amazon Web Services »](https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services) de **Mathieu Nebra**.
 
 Si vous avez des questions n’hésitez pas à les poser à l’adresse suivante : infos@lechatgraphique.fr. :)
 
