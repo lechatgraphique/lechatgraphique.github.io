@@ -1,5 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-11T23:40:53+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Série 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp;amp; RDS</title><link href="http://localhost:4000/blog/s1-introduction-serveur-lemp" rel="alternate" type="text/html" title="Série 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp; RDS" /><published>2019-06-11T16:00:00+02:00</published><updated>2019-06-11T16:00:00+02:00</updated><id>http://localhost:4000/blog/s1-introduction%20-serveur-lemp</id><content type="html" xml:base="http://localhost:4000/blog/s1-introduction-serveur-lemp">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Nous allons voir ensemble comment installer et configurer un serveur « LEMP »  &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt; avec les services Amazon Serveur.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-12T07:51:39+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+Afin d’accéder aux différents services disponibles sur AWS, vous devez vous &lt;strong&gt;créer un compte&lt;/strong&gt;. Je vous explique ci-dessous comment faire. &lt;strong&gt;Le formulaire d’inscription&lt;/strong&gt; : &lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?nc2=h_ct&amp;amp;src=header_signup&amp;amp;redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;amp;language=fr_fr#/start&quot;&gt;www.aws.server.com/fr/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt;, vous pouvez utiliser une partie des &lt;strong&gt;services gratuitement les 12 premiers mois&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Renseignez les différents champs demandés. Puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vous devez maintenant remplir vos informations personnelles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-perso.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Par la suite il faudra mettre &lt;strong&gt;vos informations bancaires&lt;/strong&gt; afin de continuer l’inscription. Même si vous n’envisagez pas de payer et que vous comptez rester sur &lt;strong&gt;l’offre gratuite&lt;/strong&gt;, vous devez saisir votre carte bancaire.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-paiement.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vérification de vos coordonnées téléphoniques. Indiquez votre numéro de téléphone et faites-vous appeler.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La procédure est entièrement automatisée. &lt;strong&gt;Saisissez le code de vérification&lt;/strong&gt;, puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-code.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-valide.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon vous demandera quel &lt;strong&gt;plan de support&lt;/strong&gt; voulez-vous souscrire.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-plan.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le &lt;strong&gt;plan basique&lt;/strong&gt; (gratuit).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Voilà l’inscription est terminé !&lt;/strong&gt; Vous pouvez profiter dès maintenant &lt;strong&gt;des services AWS&lt;/strong&gt; :) .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-compte.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :&lt;/strong&gt;
+ &lt;a href=&quot;https://aws.amazon.com/fr/free/free-tier/&quot;&gt;Offre gratuite d’AWS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous allons voir dans la prochaine étape la création d’une &lt;strong&gt;instance EC2&lt;/strong&gt; afin d’y installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire. Le formulaire d’inscription : www.aws.server.com/fr/.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/aws.png" /></entry><entry><title type="html">Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp;amp; RDS</title><link href="http://localhost:4000/blog/ep0-introduction-serveur-lemp" rel="alternate" type="text/html" title="Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp; RDS" /><published>2019-06-11T16:00:00+02:00</published><updated>2019-06-11T16:00:00+02:00</updated><id>http://localhost:4000/blog/ep0-introduction-serveur-lemp</id><content type="html" xml:base="http://localhost:4000/blog/ep0-introduction-serveur-lemp">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Nous allons voir ensemble comment installer et configurer un serveur « LEMP »  &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt; avec les Amazon Web Services.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/fr/ec2/&quot;&gt;Amazon Elastic Compute Cloud (Amazon EC2)&lt;/a&gt;&lt;/li&gt;
@@ -8,22 +47,24 @@
 
 &lt;p&gt;&lt;strong&gt;L’acronyme « LEMP »&lt;/strong&gt; décrit un système d’exploitation Linux, avec un serveur web Nginx, une base de données MySQL externe (RDS)  et le traitement dynamique des pages gérées par PHP.&lt;/p&gt;
 
-&lt;p&gt;Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress avec les services AWS.&lt;/p&gt;
+&lt;p&gt;Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress.&lt;/p&gt;
 
 &lt;h2 id=&quot;sommaire&quot;&gt;Sommaire&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Série 1&lt;/strong&gt; : Créer un compte Amazon Serveur (AWS)&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Série 2&lt;/strong&gt; : Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Série 3&lt;/strong&gt; : Sécuriser Nginx avec Let’s Encrypt (SSL) sur Ubuntu 18.04 LTS&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Série 4&lt;/strong&gt; : Créer une base de données MySQL avec RDS&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Série 5&lt;/strong&gt; : Installer WordPress sur notre instance EC2&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 1&lt;/strong&gt; : Créer un compte Amazon Web Services (AWS)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 2&lt;/strong&gt; : Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 3&lt;/strong&gt; : Sécuriser Nginx avec Let’s Encrypt (SSL) sur Ubuntu 18.04 LTS&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 4&lt;/strong&gt; : Créer une base de données MySQL avec RDS&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 5&lt;/strong&gt; : Installer WordPress sur notre instance EC2&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Je mettrais à jour les liens du sommaire au fur et à mesure.&lt;/p&gt;
 
+&lt;p&gt;Je vous recommande cepandant de lire le cours OpenClassRooms : &lt;a href=&quot;https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services&quot;&gt;« Découvrez le cloud avec Amazon Web Services »&lt;/a&gt; de Mathieu Nebra.&lt;/p&gt;
+
 &lt;p&gt;Si vous avez des questions n’hésitez pas à les poser à l’adresse suivante : infos@lechatgraphique.fr. :)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/ready.gif&quot; alt=&quot;Ready!&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction Nous allons voir ensemble comment installer et configurer un serveur « LEMP » Linux, Nginx, MySQL, PHP avec les services Amazon Serveur.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/layers.png" /></entry><entry><title type="html">Jekyll et Github</title><link href="http://localhost:4000/blog/jekyll-github" rel="alternate" type="text/html" title="Jekyll et Github" /><published>2019-04-19T12:00:00+02:00</published><updated>2019-04-19T12:00:00+02:00</updated><id>http://localhost:4000/blog/jekyll-github</id><content type="html" xml:base="http://localhost:4000/blog/jekyll-github">&lt;p&gt;Tout d’abord il existe un tas d’outils pour créer des blogs.  Le plus répandu étant &lt;strong&gt;WordPress&lt;/strong&gt;. &lt;strong&gt;WP&lt;/strong&gt; embarque beaucoup de fonctionnalités de base et peu être personnalisable dans touts les sens &lt;strong&gt;(plugins, thèmes etc.)&lt;/strong&gt;. Le problème c’est loin d’être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/ready.gif&quot; alt=&quot;Ready!&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Introduction Nous allons voir ensemble comment installer et configurer un serveur « LEMP » Linux, Nginx, MySQL, PHP avec les Amazon Web Services.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/layers.png" /></entry><entry><title type="html">Jekyll et Github</title><link href="http://localhost:4000/blog/jekyll-github" rel="alternate" type="text/html" title="Jekyll et Github" /><published>2019-04-19T12:00:00+02:00</published><updated>2019-04-19T12:00:00+02:00</updated><id>http://localhost:4000/blog/jekyll-github</id><content type="html" xml:base="http://localhost:4000/blog/jekyll-github">&lt;p&gt;Tout d’abord il existe un tas d’outils pour créer des blogs.  Le plus répandu étant &lt;strong&gt;WordPress&lt;/strong&gt;. &lt;strong&gt;WP&lt;/strong&gt; embarque beaucoup de fonctionnalités de base et peu être personnalisable dans touts les sens &lt;strong&gt;(plugins, thèmes etc.)&lt;/strong&gt;. Le problème c’est loin d’être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.&lt;/p&gt;
 
 &lt;p&gt;Dans mon cas d’utilisation, j’ai donc décidé de tout mettre en commun avec une seule technologie qui correspondait à mes besoins et mes envies, c’est ainsi que je me suis tourné vers  &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
 
