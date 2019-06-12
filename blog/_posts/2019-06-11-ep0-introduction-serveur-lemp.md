@@ -15,7 +15,7 @@ Nous allons voir ensemble comment installer et configurer un serveur **« LEMP�
 
 **L’acronyme « LEMP »** décrit un système d’exploitation Linux, avec un serveur web Nginx, une base de données MySQL externe (RDS)  et le traitement dynamique des pages gérées par PHP.
 
-Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress.
+**Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress.**
 
 ## Sommaire
 - **Étape 1** : [Créer un compte Amazon Web Services (AWS)](https://lechatgraphique.github.io/blog/ep1-inscription-compte-aws)
@@ -28,6 +28,6 @@ Je mettrais à jour les liens du sommaire au fur et à mesure.
 
 Je vous recommande cepandant de lire le cours **OpenClassRooms** : [« Découvrez le cloud avec Amazon Web Services »](https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services) de **Mathieu Nebra**.
 
-Si vous avez des questions n’hésitez pas à les poser à l’adresse suivante : infos@lechatgraphique.fr. :)
+Si vous avez des questions n’hésitez pas à les poser à l’adresse suivante : **infos@lechatgraphique.fr**. :)
 
 ![Ready!](/assets/images/blog/ready.gif)
