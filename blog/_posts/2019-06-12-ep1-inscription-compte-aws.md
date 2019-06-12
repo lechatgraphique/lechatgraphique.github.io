@@ -7,7 +7,7 @@ numberList: "04"
 description: "Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire."
 ---
 ![Amazon Web Service!](/assets/images/blog/blog-aws-logo.png)
-Afin d’accéder aux différents services disponibles sur AWS, vous devez vous **créer un compte**. Je vous explique ci-dessous comment faire. **Le formulaire d’inscription** : [www.aws.server.com/fr/](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=fr_fr#/start).
+Afin d’accéder aux différents services disponibles sur **AWS**, vous devez vous **créer un compte**. Je vous explique ci-dessous comment faire. **Le formulaire d’inscription** : [www.aws.server.com/fr/](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=fr_fr#/start).
 
 **Rappel**, vous pouvez utiliser une partie des **services gratuitement les 12 premiers mois**.
 
@@ -36,7 +36,7 @@ Amazon vous demandera quel **plan de support** voulez-vous souscrire.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-inscription-plan.png)
 
-Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le **plan basique** (gratuit).
+Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le **plan basique (gratuit)**.
 
 **Voilà l’inscription est terminé !** Vous pouvez profiter dès maintenant **des services AWS** :) .
 
@@ -45,4 +45,4 @@ Ces options intéressent surtout les entreprises qui ont besoin de joindre quelq
 **Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :**
  [Offre gratuite d’AWS](https://aws.amazon.com/fr/free/free-tier/) 
 
-Nous allons voir dans la prochaine étape la création d’une **instance EC2** afin d’y installer la **Stack « LEMP »** `Linux`, `Nginx`, `MySQL`, `PHP`.
+Nous allons voir dans la prochaine étape la création d’une **instance EC2** afin d’y installer la **Stack « LEMP »** `Linux`, `Nginx`, `MySQL`, `PHP`.
