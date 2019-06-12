@@ -18,7 +18,7 @@ Nous allons voir ensemble comment installer et configurer un serveur « LEMP �
 Cette série de tutos a pour but de vous montrer étape par étape l’installation et la configuration d’un serveur web sécurisé WordPress.
 
 ## Sommaire
-- **Étape 1** : Créer un compte Amazon Web Services (AWS)
+- **Étape 1** : [Créer un compte Amazon Web Services (AWS)](https://lechatgraphique.github.io/blog/ep1-inscription-compte-aws)
 - **Étape 2** : Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS
 - **Étape 3** : Sécuriser Nginx avec Let’s Encrypt (SSL) sur Ubuntu 18.04 LTS
 - **Étape 4** : Créer une base de données MySQL avec RDS
