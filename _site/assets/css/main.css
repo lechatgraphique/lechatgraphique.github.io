@@ -132,7 +132,7 @@ header { display: flex; align-items: center; justify-content: center; margin: 30
   a { flex-direction: column; }
   a .post-thumbnail { width: 35px; margin-left: 1.3rem; }
   a .post-thumbnail img { display: block; } }
-.heading-post h2 { margin: 0; color: #23263B; }
+.heading-post h2 { margin: 0; color: #23263B; font-weight: 200; }
 .heading-post time { font-size: .8rem; margin: 0 0 10px 0; color: #959595; }
 
 .post-nav-next { text-align: right; }
