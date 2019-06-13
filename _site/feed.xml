@@ -1,45 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-13T13:14:03+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
-Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;/strong&gt;, vous devez vous &lt;strong&gt;créer un compte&lt;/strong&gt;. Je vous explique ci-dessous comment faire. &lt;strong&gt;Le formulaire d’inscription&lt;/strong&gt; : &lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?nc2=h_ct&amp;amp;src=header_signup&amp;amp;redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;amp;language=fr_fr#/start&quot;&gt;www.aws.server.com/fr/&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-13T13:26:29+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu" rel="alternate" type="text/html" title="Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS" /><published>2019-06-13T06:00:00+02:00</published><updated>2019-06-13T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu</id><content type="html" xml:base="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu">&lt;p&gt;Aujourd’hui nous allons voir comment lancer et configurer notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt; via la &lt;strong&gt;Console AWS&lt;/strong&gt;. Une fois l’instance lancer nous lancerons le terminal afin de ce &lt;strong&gt;connecter en SSH&lt;/strong&gt; et d’installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt;, vous pouvez utiliser une partie des &lt;strong&gt;services gratuitement les 12 premiers mois&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Renseignez les différents champs demandés. Puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vous devez maintenant remplir vos informations personnelles.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-perso.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Par la suite il faudra mettre &lt;strong&gt;vos informations bancaires&lt;/strong&gt; afin de continuer l’inscription. Même si vous n’envisagez pas de payer et que vous comptez rester sur &lt;strong&gt;l’offre gratuite&lt;/strong&gt;, vous devez saisir votre carte bancaire.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-paiement.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vérification de vos coordonnées téléphoniques. Indiquez votre numéro de téléphone et faites-vous appeler.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;La procédure est entièrement automatisée. &lt;strong&gt;Saisissez le code de vérification&lt;/strong&gt;, puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-code.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
-&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-valide.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Amazon vous demandera quel &lt;strong&gt;plan de support&lt;/strong&gt; voulez-vous souscrire.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-plan.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le &lt;strong&gt;plan basique (gratuit)&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Voilà l’inscription est terminé !&lt;/strong&gt; Vous pouvez profiter dès maintenant &lt;strong&gt;des services AWS&lt;/strong&gt; :) .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-compte.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :&lt;/strong&gt;
- &lt;a href=&quot;https://aws.amazon.com/fr/free/free-tier/&quot;&gt;Offre gratuite d’AWS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nous allons voir dans la prochaine étape la création d’une &lt;strong&gt;instance EC2&lt;/strong&gt; afin d’y installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire. Le formulaire d’inscription : www.aws.server.com/fr/.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/aws.png" /></entry><entry><title type="html">Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu" rel="alternate" type="text/html" title="Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu</id><content type="html" xml:base="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu">&lt;p&gt;Dans cette étape nous allons voir comment lancer et configurer notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt; via la &lt;strong&gt;Console AWS&lt;/strong&gt;. Une fois l’instance lancer nous lancerons le terminal afin de ce &lt;strong&gt;connecter en SSH&lt;/strong&gt; et d’installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Une fois connecter à votre espace &lt;strong&gt;AWS Management Console&lt;/strong&gt; vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un &lt;strong&gt;mot clé&lt;/strong&gt; ou dans la liste des &lt;strong&gt;Services AWS&lt;/strong&gt;. Nous allons rechercher le mot &lt;strong&gt;EC2&lt;/strong&gt; et &lt;strong&gt;cliquer dessus&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Une fois connecter à votre espace &lt;strong&gt;AWS Management Console&lt;/strong&gt; vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un &lt;strong&gt;mot clé&lt;/strong&gt; ou dans la liste des &lt;strong&gt;Services AWS&lt;/strong&gt;. Rechercher le mot &lt;strong&gt;EC2&lt;/strong&gt; et &lt;strong&gt;cliquer dessus&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
@@ -47,7 +8,7 @@ Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;
 
 &lt;ul&gt;
   &lt;li&gt;Une paire de clés afin de vous connectez en &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Un groupe de sécurité  pour les accès &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTPS&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Un groupe de sécurité pour les accès &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTPS&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
@@ -62,11 +23,11 @@ Cliquer sur &lt;strong&gt;Créer une paire de clés&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Il vous demandera de &lt;strong&gt;télécharger votre clé&lt;/strong&gt;.
-&lt;strong&gt;Enregistrer votre clés&lt;/strong&gt; à l’endroit que vous souhaitez. &lt;strong&gt;Éviter de la laisser dans votre dossier téléchargement&lt;/strong&gt;.&lt;/p&gt;
+&lt;strong&gt;Enregistrer la&lt;/strong&gt; à l’endroit que vous souhaitez. &lt;strong&gt;Éviter de la laisser dans votre dossier téléchargement&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-3.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nous allons passer à l’étape suivante. Création du &lt;strong&gt;groupe de sécurité EC2&lt;/strong&gt;.
+&lt;p&gt;Nous allons passer à l’étape suivante. Création du &lt;strong&gt;Groupe de sécurité EC2&lt;/strong&gt;.
 Rendez-vous dans le menu de gauche &lt;strong&gt;Réseau et Sécurité&lt;/strong&gt; puis &lt;strong&gt;Groupes de sécurité&lt;/strong&gt;. Comme pour la &lt;strong&gt;paire de clés&lt;/strong&gt;, cliquer sur &lt;strong&gt;Créer un groupe de sécurité&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Renseigner le &lt;strong&gt;nom du groupe&lt;/strong&gt; avec une &lt;strong&gt;description&lt;/strong&gt;. Laisser le &lt;strong&gt;VPS&lt;/strong&gt; par &lt;strong&gt;défaut&lt;/strong&gt;.&lt;/p&gt;
@@ -126,11 +87,50 @@ Maintenant il est temps de lancer notre &lt;strong&gt;instance EC2&lt;/strong&gt
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Retourner dans vos instances. Vous remarquerez que votre ancienne &lt;strong&gt;IPv4&lt;/strong&gt; a changer et devenu bleu. Elle à été remplacer par votre &lt;strong&gt;IP Elastic&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Retourner dans vos instances. Vous remarquerez que votre ancienne &lt;strong&gt;IPv4&lt;/strong&gt; a changer de couleur. Elle à été remplacer par votre &lt;strong&gt;IP Elastic&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nous en avons fini sur la configuration et lancement de notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt;. Des à présent nous somme près à configurer notre serveur web en SSH.&lt;/p&gt;</content><author><name></name></author><summary type="html">Dans cette étape nous allons voir comment lancer et configurer notre instance Amazon EC2 via la Console AWS. Une fois l’instance lancer nous lancerons le terminal afin de ce connecter en SSH et d’installer la Stack « LEMP ».</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/server.png" /></entry><entry><title type="html">Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp;amp; RDS</title><link href="http://localhost:4000/blog/ep0-introduction-serveur-lemp" rel="alternate" type="text/html" title="Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp; RDS" /><published>2019-06-11T16:00:00+02:00</published><updated>2019-06-11T16:00:00+02:00</updated><id>http://localhost:4000/blog/ep0-introduction-serveur-lemp</id><content type="html" xml:base="http://localhost:4000/blog/ep0-introduction-serveur-lemp">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Nous en avons fini sur la configuration et lancement de notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt;. Des à présent nous somme près à configurer notre serveur web en SSH.&lt;/p&gt;</content><author><name></name></author><summary type="html">Aujourd’hui nous allons voir comment lancer et configurer notre instance Amazon EC2 via la Console AWS. Une fois l’instance lancer nous lancerons le terminal afin de ce connecter en SSH et d’installer la Stack « LEMP ».</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/server.png" /></entry><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;/strong&gt;, vous devez vous &lt;strong&gt;créer un compte&lt;/strong&gt;. Je vous explique ci-dessous comment faire. &lt;strong&gt;Le formulaire d’inscription&lt;/strong&gt; : &lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?nc2=h_ct&amp;amp;src=header_signup&amp;amp;redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;amp;language=fr_fr#/start&quot;&gt;www.aws.server.com/fr/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt;, vous pouvez utiliser une partie des &lt;strong&gt;services gratuitement les 12 premiers mois&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Renseignez les différents champs demandés. Puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vous devez maintenant remplir vos informations personnelles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-perso.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Par la suite il faudra mettre &lt;strong&gt;vos informations bancaires&lt;/strong&gt; afin de continuer l’inscription. Même si vous n’envisagez pas de payer et que vous comptez rester sur &lt;strong&gt;l’offre gratuite&lt;/strong&gt;, vous devez saisir votre carte bancaire.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-paiement.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vérification de vos coordonnées téléphoniques. Indiquez votre numéro de téléphone et faites-vous appeler.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;La procédure est entièrement automatisée. &lt;strong&gt;Saisissez le code de vérification&lt;/strong&gt;, puis &lt;code class=&quot;highlighter-rouge&quot;&gt;Continuer&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-code.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-verification-valide.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Amazon vous demandera quel &lt;strong&gt;plan de support&lt;/strong&gt; voulez-vous souscrire.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-plan.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le &lt;strong&gt;plan basique (gratuit)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Voilà l’inscription est terminé !&lt;/strong&gt; Vous pouvez profiter dès maintenant &lt;strong&gt;des services AWS&lt;/strong&gt; :) .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-inscription-compte.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :&lt;/strong&gt;
+ &lt;a href=&quot;https://aws.amazon.com/fr/free/free-tier/&quot;&gt;Offre gratuite d’AWS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous allons voir dans la prochaine étape la création d’une &lt;strong&gt;instance EC2&lt;/strong&gt; afin d’y installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire. Le formulaire d’inscription : www.aws.server.com/fr/.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/aws.png" /></entry><entry><title type="html">Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp;amp; RDS</title><link href="http://localhost:4000/blog/ep0-introduction-serveur-lemp" rel="alternate" type="text/html" title="Étape 00 _ Introduction Stack « LEMP » avec AWS EC2 &amp; RDS" /><published>2019-06-11T16:00:00+02:00</published><updated>2019-06-11T16:00:00+02:00</updated><id>http://localhost:4000/blog/ep0-introduction-serveur-lemp</id><content type="html" xml:base="http://localhost:4000/blog/ep0-introduction-serveur-lemp">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Nous allons voir ensemble comment installer et configurer un serveur &lt;strong&gt;« LEMP »&lt;/strong&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;Linux&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Nginx&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;MySQL&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;PHP&lt;/code&gt; avec les Amazon Web Services.&lt;/p&gt;
 
 &lt;ul&gt;

@@ -1,21 +1,21 @@
 ---
 layout: post
 title: "Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS"
-date: 2019-06-12 06:00:00 +0200
+date: 2019-06-13 06:00:00 +0200
 image : assets/images/blog/server.png
 numberList: "04"
 description: "Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire."
 ---
-Dans cette étape nous allons voir comment lancer et configurer notre instance **Amazon EC2** via la **Console AWS**. Une fois l’instance lancer nous lancerons le terminal afin de ce **connecter en SSH** et d’installer la **Stack « LEMP »**.
+Aujourd'hui nous allons voir comment lancer et configurer notre instance **Amazon EC2** via la **Console AWS**. Une fois l’instance lancer nous lancerons le terminal afin de ce **connecter en SSH** et d’installer la **Stack « LEMP »**.
 
-Une fois connecter à votre espace **AWS Management Console** vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un **mot clé** ou dans la liste des **Services AWS**. Nous allons rechercher le mot **EC2** et **cliquer dessus**.
+Une fois connecter à votre espace **AWS Management Console** vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un **mot clé** ou dans la liste des **Services AWS**. Rechercher le mot **EC2** et **cliquer dessus**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord.png)
 
 Vous vous trouvez à présent sur le **Tableau de bord EC2**. Avant de lancer une instance nous allons créer deux choses indispensable : 
 
 - Une paire de clés afin de vous connectez en `SSH`
-- Un groupe de sécurité  pour les accès `SSH`, `HTTP`, `HTTPS`
+- Un groupe de sécurité pour les accès `SSH`, `HTTP`, `HTTPS`
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png)
 
@@ -29,11 +29,11 @@ Donnez lui un **nom** puis **créer** votre **paire de clés**.
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-2.png)
 
 Il vous demandera de **télécharger votre clé**.
-**Enregistrer votre clés** à l’endroit que vous souhaitez. **Éviter de la laisser dans votre dossier téléchargement**.
+**Enregistrer la** à l’endroit que vous souhaitez. **Éviter de la laisser dans votre dossier téléchargement**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-3.png)
 
-Nous allons passer à l’étape suivante. Création du **groupe de sécurité EC2**.
+Nous allons passer à l’étape suivante. Création du **Groupe de sécurité EC2**.
 Rendez-vous dans le menu de gauche **Réseau et Sécurité** puis **Groupes de sécurité**. Comme pour la **paire de clés**, cliquer sur **Créer un groupe de sécurité**.
 
 Renseigner le **nom du groupe** avec une **description**. Laisser le **VPS** par **défaut**.
@@ -93,7 +93,7 @@ Dans le menu déroulant choisissez votre **ID d’instance**, puis **Associer**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png)
 
-Retourner dans vos instances. Vous remarquerez que votre ancienne **IPv4** a changer et devenu bleu. Elle à été remplacer par votre **IP Elastic**.
+Retourner dans vos instances. Vous remarquerez que votre ancienne **IPv4** a changer de couleur. Elle à été remplacer par votre **IP Elastic**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png)
 
