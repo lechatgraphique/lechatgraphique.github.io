@@ -31,23 +31,23 @@
         </time>
     </div>
     <div style="text-align:justify;">
-        <p>Aujourd’hui nous allons voir comment lancer et configurer notre instance <strong>Amazon EC2</strong> via la <strong>Console AWS</strong>. Une fois l’instance lancer nous lancerons le terminal afin de ce <strong>connecter en SSH</strong> et d’installer la <strong>Stack « LEMP »</strong>.</p>
+        <p>Aujourd’hui nous allons voir comment lancer et configurer notre instance <strong>Amazon EC2</strong> via la <strong>Console AWS</strong>. Une fois l’instance disponible nous lancerons le terminal afin de se <strong>connecter en SSH</strong> et d’installer la <strong>Stack « LEMP »</strong>.</p>
 
-<p>Une fois connecter à votre espace <strong>AWS Management Console</strong> vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un <strong>mot clé</strong> ou dans la liste des <strong>Services AWS</strong>. Rechercher le mot <strong>EC2</strong> et <strong>cliquer dessus</strong>.</p>
+<p>Une fois connecté à votre espace <strong>AWS Management Console</strong> vous avez plusieurs options pour choisir un service. Soit par la recherche en tapant un <strong>mot clé</strong> où dans la liste des <strong>Services AWS</strong>. Nous allons rechercher le mot <strong>EC2</strong> et <strong>cliquer dessus</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord.png" alt="Amazon Web Service!" /></p>
 
-<p>Vous vous trouvez à présent sur le <strong>Tableau de bord EC2</strong>. Avant de lancer une instance nous allons créer deux choses indispensable :</p>
+<p>Vous vous trouvez à présent sur le <strong>Tableau de bord EC2</strong>. Avant de lancer une instance nous allons créer deux choses indispensables :</p>
 
 <ul>
-  <li>Une paire de clés afin de vous connectez en <code class="highlighter-rouge">SSH</code></li>
-  <li>Un groupe de sécurité pour les accès <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTPS</code></li>
+  <li>Une paire de clés afin de vous connecter en <code class="highlighter-rouge">SSH</code></li>
+  <li>Un groupe de sécurité  pour les accès <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTPS</code></li>
 </ul>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png" alt="Amazon Web Service!" /></p>
 
-<p>Commençons par la <strong>paire de clés</strong>. Dans le menu a gauche aller dans <strong>Réseau et Sécurité</strong> puis <strong>Paire de clés</strong>. 
-Cliquer sur <strong>Créer une paire de clés</strong>.</p>
+<p>Commençons par la <strong>paire de clés</strong>. Dans le menu à gauche allez dans <strong>Réseau et Sécurité</strong> puis <strong>Paire de clés</strong>. 
+Cliquez sur <strong>Créer une paire de clés</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key.png" alt="Amazon Web Service!" /></p>
 
@@ -56,27 +56,27 @@ Cliquer sur <strong>Créer une paire de clés</strong>.</p>
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-2.png" alt="Amazon Web Service!" /></p>
 
 <p>Il vous demandera de <strong>télécharger votre clé</strong>.
-<strong>Enregistrer la</strong> à l’endroit que vous souhaitez. <strong>Éviter de la laisser dans votre dossier téléchargement</strong>.</p>
+<strong>Enregistrer</strong> à l’endroit que vous souhaitez. <strong>Évité de la laisser dans votre dossier téléchargement</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-3.png" alt="Amazon Web Service!" /></p>
 
-<p>Nous allons passer à l’étape suivante. Création du <strong>Groupe de sécurité EC2</strong>.
-Rendez-vous dans le menu de gauche <strong>Réseau et Sécurité</strong> puis <strong>Groupes de sécurité</strong>. Comme pour la <strong>paire de clés</strong>, cliquer sur <strong>Créer un groupe de sécurité</strong>.</p>
+<p>Nous allons passer à l’étape suivante. Création du <strong>groupe de sécurité EC2</strong>.
+Rendez-vous dans le menu de gauche <strong>Réseau et Sécurité</strong> puis <strong>Groupes de sécurité</strong>. Comme pour la <strong>paire de clés</strong>, cliquez sur <strong>Créer un groupe de sécurité</strong>.</p>
 
-<p>Renseigner le <strong>nom du groupe</strong> avec une <strong>description</strong>. Laisser le <strong>VPS</strong> par <strong>défaut</strong>.</p>
+<p>Renseignez le <strong>nom du groupe</strong> avec une <strong>description</strong>. Laissez le <strong>VPS</strong> par <strong>défaut</strong>.</p>
 
-<p>Nous devons autoriser les entrées suivante. <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTS</code>.  Une fois terminer cliquer sur <strong>Créer</strong>.</p>
+<p>Nous devons autoriser les entrées suivantes. <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTS</code>.  Une fois terminé cliquez sur <strong>Créer</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-group-security.png" alt="Amazon Web Service!" /></p>
 
-<p>Nous avons terminer la configuration de notre <strong>paire de clés</strong> et notre <strong>groupe de sécurité</strong> ! 
+<p>Nous avons terminé la configuration de notre <strong>paire de clés</strong> et notre <strong>groupe de sécurité</strong> ! 
 Maintenant il est temps de lancer notre <strong>instance EC2</strong>.</p>
 
-<p>Retourner sur le <strong>Tableau de bord EC2</strong>, puis cliquer sur <strong>Lancer une instance</strong>.</p>
+<p>Retournez sur le <strong>Tableau de bord EC2</strong>, puis cliquez sur <strong>Lancer une instance</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png" alt="Amazon Web Service!" /></p>
 
-<p>On vous proposent de choisir une <strong>image (AMI)</strong>. Pour nous nous allons choisir <strong>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type</strong> en <strong>64bits (x86)</strong>.</p>
+<p>On vous proposent de choisir une <strong>image (AMI)</strong>. Nous allons choisir <strong>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type</strong> en <strong>64bits (x86)</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png" alt="Amazon Web Service!" /></p>
 
@@ -90,13 +90,13 @@ Maintenant il est temps de lancer notre <strong>instance EC2</strong>.</p>
 
 <p>Je passe volontairement l’étape des <strong>balises</strong>. Si vous souhaitez plus d’information dessus : <a href="https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/">Balises des ressources Amazon EC2</a>.</p>
 
-<p>Passez à l’étape <strong>Suivante : Configurer le groupe de sécurité</strong>. Comme nous avons déjà créer notre <strong>groupe de sécurité</strong>, nous avons juste à sélectionner un <strong>groupe de sécurité existant</strong> et cocher notre <strong>ID de groupe de sécurité</strong>.</p>
+<p>Passez à l’étape <strong>Suivante : Configurer le groupe de sécurité</strong>. Comme nous avons déjà crée notre <strong>groupe de sécurité</strong>, nous avons juste à sélectionner un <strong>groupe de sécurité existant</strong> et cocher notre <strong>ID de groupe de sécurité</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4.png" alt="Amazon Web Service!" /></p>
 
-<p>Cliquer sur <strong>Vérifier et lancer</strong>. Vous retrouvez un récapitulatif de toute la configuration de votre <strong>Instance EC2</strong>. Passer à l’étape <strong>Suivante : Lancer</strong>.</p>
+<p>Cliquez sur <strong>Vérifier et lancer</strong>. Vous retrouvez un récapitulatif de toute la configuration de votre <strong>Instance EC2</strong>. Passez à l’étape <strong>Suivante : Lancer</strong>.</p>
 
-<p>On vous demande de sélectionnez une <strong>paire de clés</strong>. Comme nous l’avons fait au préalable, choisissez votre <strong>clés</strong> et <strong>Lancer votre instance</strong>.</p>
+<p>On vous demande de sélectionner une <strong>paire de clés</strong>. Comme nous l’avons fait au préalable, choisissez votre <strong>clés</strong> et <strong>Lancer votre instance</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-5.png" alt="Amazon Web Service!" /></p>
 
@@ -110,9 +110,9 @@ Maintenant il est temps de lancer notre <strong>instance EC2</strong>.</p>
 
 <p>Allez dans le menu de gauche dans <strong>Réseau et sécurité</strong> puis <strong>Adresse IP Elastic</strong>. <strong>Allouer une nouvelle adresse</strong>.</p>
 
-<p>Laisser le <strong>Pool Amazon</strong> par <strong>défaut</strong> et faite <strong>Allouer</strong>.</p>
+<p>Laissez le <strong>Pool Amazon</strong> par <strong>défaut</strong> et faite <strong>Allouer</strong>.</p>
 
-<p>Vous avez créer votre <strong>IP Fixe</strong>. Il vous reste plus cas <strong>associer votre IP</strong> à votre <strong>Instance EC2</strong>. <strong>Clique droit</strong> sur votre <strong>IP Elastic</strong> puis <strong>Associer l’adresse</strong>.</p>
+<p>Vous avez crée votre <strong>IP Fixe</strong>. Il vous reste plus qu’à <strong>associer votre IP</strong> à votre <strong>Instance EC2</strong>. <strong>Clique droit</strong> sur votre <strong>IP Elastic</strong> puis <strong>Associer l’adresse</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic.png" alt="Amazon Web Service!" /></p>
 
@@ -120,12 +120,11 @@ Maintenant il est temps de lancer notre <strong>instance EC2</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png" alt="Amazon Web Service!" /></p>
 
-<p>Retourner dans vos instances. Vous remarquerez que votre ancienne <strong>IPv4</strong> a changer de couleur. Elle à été remplacer par votre <strong>IP Elastic</strong>.</p>
+<p>Retournez dans vos instances. Vous remarquerez que votre ancienne <strong>IPv4</strong> a changé et devenue bleu. Elle à été remplacé par votre <strong>IP Elastic</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png" alt="Amazon Web Service!" /></p>
 
-<p>Nous en avons fini sur la configuration et lancement de notre instance <strong>Amazon EC2</strong>. Des à présent nous somme près à configurer notre serveur web en SSH.</p>
-
+<p>Nous en avons fini sur la configuration et le lancement de notre instance <strong>Amazon EC2</strong>. Dès à présent nous sommes près à configurer notre serveur web en SSH.</p>
 
     </div>
     <div class="post-nav">
