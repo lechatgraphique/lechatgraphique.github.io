@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+	
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content=""">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet"> 
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head>
+	
+	<body>
+
+		<header>
+    <a href="http://localhost:4000/"><img src="/assets/images/rocketdev.svg" alt="ROCKET.DEV" width="250"></a>
+</header>
+		
+		<div class="post">
+    <div class="heading-post">
+            <img class="thumb" src="http://localhost:4000/assets/images/blog/ssl.png" alt="Étape 03 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS" width="75" height="75">
+        <h2 class="post-title">Étape 03 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS</h2>
+        
+        <time class="post-date" datetime="Fri, 14 Jun 2019 06:00:00 +0200">
+            Publié le 14 
+            juin
+                 2019
+        </time>
+    </div>
+    <div style="text-align:justify;">
+        <p>Afin de sécuriser votre site avec un <strong>Certificat SSL</strong>, vous devez disposez d’un <strong>nom de domaine</strong> entièrement enregistré. J’utiliserai <strong>example.com</strong> tout au long de ce didacticiel.</p>
+
+<p>Vous devez avoir les <strong>deux enregistrements DNS</strong> et configurés pour votre serveur.</p>
+
+<ul>
+  <li>Un <strong>enregistrement A</strong> avec <strong>example.com</strong> pointant sur l’adresse <strong>IP publique</strong> de votre serveur.</li>
+  <li>Un <strong>enregistrement A</strong> avec <strong>www.example.com</strong> pointant sur l’adresse <strong>IP publique</strong> de votre serveur.</li>
+</ul>
+
+<p>L’étape qui suis sera l’installation de <strong>Let’s Encrypt</strong> pour obtenir un <strong>certificat SSL</strong>. Dans notre cas nous utiliserons un logiciel <strong>Certbot</strong> sur votre serveur.</p>
+
+<p><strong>Certbot</strong> est en développement très actif. Les développeurs de <strong>Certbot</strong> conservent un référentiel de logiciels Ubuntu avec des versions à jour, nous allons donc utiliser ce référentiel.</p>
+
+<p>Tout d’abord connectez-vous en <strong>SSH</strong> puis ajoutez le référentiel :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo add-apt-repository ppa:certbot/certbot
+</code></pre></div></div>
+
+<p>Vous devrez appuyer sur <code class="highlighter-rouge">ENTER</code> pour accepter.
+Installez le paquet <strong>Nginx</strong> de <strong>Certbot</strong>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install python-certbot-nginx
+</code></pre></div></div>
+
+<p><strong>Certbot</strong> est maintenant prêt à être utilisé, mais pour <strong>configurer SSL</strong> pour <strong>Nginx</strong>, nous devons vérifier une partie de la configuration de <strong>Nginx</strong>.</p>
+
+<p>Certbot doit pouvoir trouver le <strong>bloc serveur</strong> correct dans votre <strong>configuration Nginx</strong> pour pouvoir <strong>configurer automatiquement SSL</strong>. Pour ce faire, il recherche une directive <code class="highlighter-rouge">server_name</code> correspondant au domaine pour lequel vous demandez un <strong>certificat</strong>.</p>
+
+<p>Pour vérifier, ouvrez le fichier du <strong>bloc serveur</strong> de votre domaine.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/nginx/sites-available/example.com
+</code></pre></div></div>
+
+<p>Puis insérez le code ci-dessous :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server {
+        listen 80;
+        root /var/www/html;
+        index index.php index.html index.htm index.nginx-debian.html;
+        server_name example.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        }
+
+        location ~ /\.ht {
+                deny all;
+        }
+}
+</code></pre></div></div>
+
+<p>Recherchez la ligne existante <code class="highlighter-rouge">server_name</code>.
+Mettez-le à jour pour qu’il corresponde à votre nom de domaine.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server_name example.com www.example.com;
+</code></pre></div></div>
+
+<p>Activez votre nouveau <strong>bloc serveur</strong> en créant un <strong>lien symbolique</strong> à partir du fichier de configuration de votre nouveau bloc serveur :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+</code></pre></div></div>
+
+<p>Ensuite, dissociez le fichier de configuration par défaut du répertoire :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo unlink /etc/nginx/sites-enabled/default
+</code></pre></div></div>
+
+<p><strong>Enregistrez</strong> le fichier et quittez votre éditeur. Vérifiez la syntaxe de vos modifications de configuration :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nginx -t
+</code></pre></div></div>
+
+<p>Si vous obtenez une erreur, ouvrez de nouveau le fichier et recherchez les fautes de frappe ou les caractères manquants. Une fois que la syntaxe de votre fichier de configuration est correcte, <strong>rechargez Nginx</strong> pour charger la nouvelle configuration :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo systemctl reload nginx
+</code></pre></div></div>
+
+<p><strong>Certbot</strong> peut maintenant trouver le bloc serveur correct et le mettre à jour.</p>
+
+<p><strong>Certbot</strong> fournit diverses méthodes pour obtenir des <strong>certificats SSL</strong> via des plugins. Le <strong>plugin Nginx</strong> se chargera de <strong>reconfigurer Nginx</strong> et de recharger la configuration chaque fois que nécessaire. Pour utiliser ce plugin, tapez ce qui suit :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo certbot --nginx -d example.com -d www.example.com
+</code></pre></div></div>
+
+<p>Ceci exécute <strong>Certbot</strong> avec le plugin —nginx, en utilisant -d pour spécifier les noms pour lesquels nous souhaitons que le certificat soit valide.</p>
+
+<p>Si vous utilisez <strong>Certbot</strong> pour la première fois, vous serez invité à entrer une <strong>adresse e-mail</strong> et à accepter les conditions d’utilisation. Ensuite, <strong>certbot</strong> communiquera avec le <strong>serveur Let’s Encrypt</strong>, puis lancera un défi afin de vérifier que vous contrôlez le domaine pour lequel vous demandez un <strong>certificat</strong>.</p>
+
+<p>Si cela réussit, <strong>Certbot</strong> vous demandera comment vous souhaitez configurer vos <strong>paramètres HTTPS</strong>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+-------------------------------------------------------------------------------
+1: No redirect - Make no further changes to the webserver configuration.
+2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+new sites, or if you're confident your site works on HTTPS. You can undo this
+change by editing your web server's configuration.
+-------------------------------------------------------------------------------
+Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
+</code></pre></div></div>
+
+<p>Sélectionnez votre choix puis appuyez sur <code class="highlighter-rouge">ENTRER</code>. La configuration sera mise à jour et <strong>Nginx</strong> se rechargera pour récupérer les nouveaux paramètres. <strong>Certbot</strong> se terminera par un message vous informant que le processus a abouti et où vos certificats sont stockés.</p>
+
+<p>Les certificats de <strong>Let’s Encrypt</strong> ne sont valides que pendant <strong>90 jours</strong>. Cela encourage les utilisateurs à automatiser leur processus de renouvellement des certificats. Le paquet <strong>Certbot</strong> que nous avons installé s’occupe de cela en ajoutant un <strong>scripT de renouvellement</strong> à /etc/cron.d. Ce script s’exécute deux fois par jour et renouvellera automatiquement tout certificat dans les trente jours suivant l’expiration.</p>
+
+<p>Pour tester le processus de renouvellement, vous pouvez effectuer un essai à blanc avec <strong>Certbot</strong> :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo certbot renew --dry-run
+</code></pre></div></div>
+
+<p>Si vous ne voyez aucune erreur, vous êtes prêt. Si nécessaire, <strong>Certbot</strong> renouvellera vos certificats et rechargera <strong>Nginx</strong> pour prendre en compte les modifications. En cas d’échec du processus de renouvellement automatique, <strong>Let’s Encrypt</strong> enverra un message au courrier électronique que vous avez spécifié pour vous avertir de l’expiration de votre certificat.</p>
+
+    </div>
+    <div class="post-nav">
+        <div>
+            
+            <a href="/blog/ep2-instance-ec2-aws-lemp-ubuntu">&laquo;&nbsp;Précédent</a>
+            
+        </div>
+        <div class="post-nav-next">
+            
+        </div>
+    </div>
+</div>
+
+
+		
+		<footer>
+    <div>
+        <a href="https://fr.linkedin.com/in/bastien-clement" target="_blank">
+            <img src="/assets/images/linkedin.svg" alt="LinkedIn" width="25">
+        </a>
+        <a href="https://www.instagram.com/bc_lechatgraphique/" target="_blank">
+            <img src="/assets/images/instagram.svg" alt="Instagram" width="25">
+        </a>
+        <a href="https://github.com/newlifeofdeveloper" target="_blank">
+            <img src="/assets/images/github.svg" alt="Github" width="25">
+        </a>
+    </div>
+    <div>© 2019 RocketDev inc. by Bastien CLEMENT</div>
+</footer>
+
+	</body>
+</html>

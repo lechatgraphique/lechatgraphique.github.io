@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+	
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content=""">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet"> 
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head>
+	
+	<body>
+
+		<header>
+    <a href="http://localhost:4000/"><img src="/assets/images/rocketdev.svg" alt="ROCKET.DEV" width="250"></a>
+</header>
+		
+		<div class="post">
+    <div class="heading-post">
+            <img class="thumb" src="http://localhost:4000/assets/images/blog/server.png" alt="Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS" width="75" height="75">
+        <h2 class="post-title">Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS</h2>
+        
+        <time class="post-date" datetime="Thu, 13 Jun 2019 06:00:00 +0200">
+            Publié le 13 
+            juin
+                 2019
+        </time>
+    </div>
+    <div style="text-align:justify;">
+        <p>Aujourd’hui nous allons voir comment lancer et configurer notre instance <strong>Amazon EC2</strong> via la <strong>console AWS</strong>. Une fois l’instance disponible nous lancerons le terminal afin de se <strong>connecter en SSH</strong> et installer la <strong>Stack « LEMP »</strong>.</p>
+
+<p>Une fois connecté à votre espace <strong>AWS Management Console</strong> vous avez plusieurs options pour sélectionner un service. Soit par la recherche en tapant un <strong>mot-clé</strong> ou dans la liste des <strong>Services AWS</strong>. Rechercher le mot <strong>EC2</strong> et <strong>cliquer dessus</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord.png" alt="Amazon Web Service!" /></p>
+
+<p>Vous vous trouvez à présent sur le <strong>tableau de bord EC2</strong>. Avant de lancer une instance nous allons créer deux choses indispensables :</p>
+
+<ul>
+  <li>Une paire de clés afin de vous connecter en <code class="highlighter-rouge">SSH</code></li>
+  <li>Un groupe de sécurité  pour les accès <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTPS</code></li>
+</ul>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png" alt="Amazon Web Service!" /></p>
+
+<p>Commençons par la <strong>paire de clés</strong>. Dans le menu à gauche allez dans <strong>Réseau et Sécurité</strong> puis <strong>Paire de clés</strong>. 
+Cliquez sur <strong>Créer une paire de clés</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key.png" alt="Amazon Web Service!" /></p>
+
+<p>Donnez-lui un <strong>nom</strong> puis <strong>créer</strong> votre <strong>pair de clés</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-2.png" alt="Amazon Web Service!" /></p>
+
+<p>Il vous demandera de <strong>télécharger un fichier en .pem</strong>.
+<strong>Enregistrer</strong> à l’endroit que vous souhaitez. <strong>Évité de la laisser dans votre dossier téléchargement</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-3.png" alt="Amazon Web Service!" /></p>
+
+<p>Nous allons passer à l’étape suivantes. <strong>Groupe de sécurité EC2</strong>.
+Rendez-vous dans le menu de gauche <strong>Réseau et Sécurité</strong> puis <strong>Groupes de sécurité</strong>. Comme pour la <strong>paire de clés</strong>, cliquez sur <strong>Créer un groupe de sécurité</strong>.</p>
+
+<p>Renseignez le <strong>nom du groupe</strong> avec une <strong>description</strong> puis laissez le <strong>VPS</strong> par <strong>défaut</strong>.</p>
+
+<p>Nous devons autoriser les entrées suivantes. <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTS</code>.  Une fois terminé cliquez sur <strong>Créer</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-group-security.png" alt="Amazon Web Service!" /></p>
+
+<p>Nous avons terminé la configuration de notre <strong>paire de clés</strong> et notre <strong>groupe de sécurité</strong> ! 
+Maintenant il est temps de lancer notre <strong>instance EC2</strong>.</p>
+
+<p>Retournez sur le <strong>tableau de bord EC2</strong>, puis cliquez sur <strong>lancer une instance</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png" alt="Amazon Web Service!" /></p>
+
+<p>On vous proposent de choisir une <strong>image (AMI)</strong>. Nous allons choisir <strong>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type</strong> en <strong>64bits (x86)</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png" alt="Amazon Web Service!" /></p>
+
+<p>Choisissez le type éligible à <strong>l’offre gratuite</strong> puis faite <strong>Suivant : Configurer les détails de l’instance</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-2.png" alt="Amazon Web Service!" /></p>
+
+<p>Vous n’avez rien de particulier à faire sur cette configuration. Passez à l’étape <strong>Suivante : Ajouter du stockage</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-3.png" alt="Amazon Web Service!" /></p>
+
+<p>Je passe volontairement l’étape des <strong>balises</strong>. Si vous souhaitez plus d’information dessus : <a href="https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/">Balises des ressources Amazon EC2</a>.</p>
+
+<p>Passez à l’étape <strong>Suivante : Configurer le groupe de sécurité</strong>. Comme nous avons déjà crée notre <strong>groupe de sécurité</strong>, nous avons juste à sélectionner un <strong>groupe de sécurité existant</strong> et cocher notre <strong>ID de groupe de sécurité</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4.png" alt="Amazon Web Service!" /></p>
+
+<p>Cliquez sur <strong>Vérifier et lancer</strong>. Vous y retrovuerez un récapitulatif de toute la configuration de votre <strong>Instance EC2</strong>. Passez à l’étape <strong>Suivante : Lancer</strong>.</p>
+
+<p>On vous demande de sélectionner une <strong>paire de clés</strong>. Comme nous l’avons fait au préalable, choisissez votre <strong>clés</strong> et <strong>Lancer votre instance</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-5.png" alt="Amazon Web Service!" /></p>
+
+<p>Voila votre instance est en cours de lancement. Allez sur <strong>Afficher les instance</strong>.</p>
+
+<p>Vous pouvez voir que l’instance est en <strong>État : Running</strong>. Cela veut dire que tout fonctionne bien.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-6.png" alt="Amazon Web Service!" /></p>
+
+<p>Un point très <strong>important</strong>. <strong>AWS</strong> vous attribue un <strong>IPv4</strong> pour avoir accès à votre site. Cependant cette IP changera à chaque redémarrage du serveur. Vous pouvez pallier à ce problème en attribuant une <strong>IP Elastic</strong> à votre instance ce qui aura pour effet d’avoir une <strong>IP Fixe</strong>.</p>
+
+<p>Allez dans le menu de gauche dans <strong>Réseau et sécurité</strong> puis <strong>Adresse IP Elastic</strong>. <strong>Allouer une nouvelle adresse</strong>.</p>
+
+<p>Laissez le <strong>Pool Amazon</strong> par <strong>défaut</strong> et faite <strong>Allouer</strong>.</p>
+
+<p>Vous avez crée votre <strong>IP Fixe</strong>. Il vous reste plus qu’à <strong>associer votre IP</strong> à votre <strong>Instance EC2</strong>. <strong>Clique droit</strong> sur votre <strong>IP Elastic</strong> puis <strong>Associer l’adresse</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic.png" alt="Amazon Web Service!" /></p>
+
+<p>Dans le menu déroulant choisissez votre <strong>ID d’instance</strong>, puis <strong>Associer</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png" alt="Amazon Web Service!" /></p>
+
+<p>Retournez dans vos instances. Vous remarquerez que votre ancienne <strong>IPv4</strong> a changé et devenue bleu. Elle à été remplacé par votre <strong>IP Elastic</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png" alt="Amazon Web Service!" /></p>
+
+<p>Nous en avons fini sur la configuration et le lancement de notre instance <strong>Amazon EC2</strong>. Dès à présent nous sommes près à configurer notre <strong>serveur web</strong> en <strong>SSH</strong>.</p>
+
+<p>Pour trouver vos identifiants de connexion <strong>SSH</strong> vous devez sélectionner votre instance. En haut de votre navigateur cliquer sur le bouton connexion.
+Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous connectez en <strong>SSH</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-indentifiant-ssh.png" alt="Amazon Web Service!" /></p>
+
+<p>Ouvrez votre <strong>terminal</strong>. Votre clé ne doit pas être visible publiquement pour que SSH fonctionne. Utilisez cette commande :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod 400 votre_paire_de_clés.pem
+</code></pre></div></div>
+
+<p>Puis connectez-vous en <strong>SSH</strong> :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i "votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+</code></pre></div></div>
+
+<p>Si votre paire de clés est dans un dossier spécifique, indiquez le <strong>PATH</strong> complet. Par exemple :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+</code></pre></div></div>
+
+<p>Vous devez vous retrouvez comme ci-dessous :</p>
+
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-terminal.png" alt="Amazon Web Service!" /></p>
+
+<p>Commencez à mettre à jour <strong>l’index des paquets</strong> de votre serveur.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+</code></pre></div></div>
+
+<p>Ensuite, <strong>installez</strong> le serveur Nginx.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install nginx
+</code></pre></div></div>
+
+<p>Une fois <strong>Nginx</strong> installer, tapez <strong>l’adresse de votre site</strong> ou <strong>IP Elastic</strong> dans votre navigateur. La page de destination par défaut de Nginx apparaît :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://serveur_domaine_ou_ip.com
+</code></pre></div></div>
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-page-nginx.png" alt="Amazon Web Service!" /></p>
+
+<p>Si vous voyez la page ci-dessus, vous avez correctement installé Nginx.</p>
+
+<p>Maintenant que vous avez votre serveur Web, vous devez installer <strong>MySQL</strong>. Dans notre cas nous installons juste les dépendances afin de connecter plus tard notre base de données <strong>Amazon RDS.</strong></p>
+
+<p>Installez <strong>MySQL Server</strong> :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install mysql-server
+</code></pre></div></div>
+
+<p>Vous n’avez rien d’autre à faire pour <strong>MySQL</strong>.</p>
+
+<p>Étant donnée que <strong>Nginx</strong> ne contient pas de <strong>traitement PHP</strong> natif, contrairement à certains autres <strong>serveurs Web</strong>, vous devrez installer <code class="highlighter-rouge">php-fpm</code>, qui signifie <strong>« fastCGI process manager »</strong>. Nous dirons à Nginx de transmettre les requêtes PHP à ce logiciel pour le traitement.</p>
+
+<p>Installez le module <code class="highlighter-rouge">php-fpm</code>, <code class="highlighter-rouge">php-mysql</code>, qui permettra à PHP de communiquer avec votre base de données. L’installation utilisera les fichiers de base de PHP nécessaires :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install php-fpm php-mysql
+</code></pre></div></div>
+
+<p>Dans la prochaine étape nous allons <strong>Sécuriser Nginx avec Let’s Encrypt (SSL)</strong>. <strong>Cette étape n’étant pas obligatoire</strong> vous pouvez directement passer à l’étape <strong>« Créer une base de données MySQL avec RDS »</strong>. Cepandant si vous souhaitez suivre la <strong>sécurisation Nginx</strong> vous devez disposez d’un <strong>nom de domaine</strong>.</p>
+
+    </div>
+    <div class="post-nav">
+        <div>
+            
+            <a href="/blog/ep1-inscription-compte-aws">&laquo;&nbsp;Précédent</a>
+            
+        </div>
+        <div class="post-nav-next">
+            
+            <a href="/blog/ep3-lets-encrypt-ssl">Suivant&nbsp;&raquo;</a>
+            
+        </div>
+    </div>
+</div>
+
+
+		
+		<footer>
+    <div>
+        <a href="https://fr.linkedin.com/in/bastien-clement" target="_blank">
+            <img src="/assets/images/linkedin.svg" alt="LinkedIn" width="25">
+        </a>
+        <a href="https://www.instagram.com/bc_lechatgraphique/" target="_blank">
+            <img src="/assets/images/instagram.svg" alt="Instagram" width="25">
+        </a>
+        <a href="https://github.com/newlifeofdeveloper" target="_blank">
+            <img src="/assets/images/github.svg" alt="Github" width="25">
+        </a>
+    </div>
+    <div>© 2019 RocketDev inc. by Bastien CLEMENT</div>
+</footer>
+
+	</body>
+</html>

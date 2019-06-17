@@ -4,7 +4,7 @@ title: "Étape 01 _ Créer un compte Amazon Web Serveur (AWS)"
 date: 2019-06-12 06:00:00 +0200
 image : assets/images/blog/aws.png
 numberList: "04"
-description: "Afin d’accéder aux différents services disponibles sur AWS, vous devez vous créer un compte. Je vous explique ci-dessous comment faire."
+description: ""
 ---
 ![Amazon Web Service!](/assets/images/blog/blog-aws-logo.png)
 Afin d’accéder aux différents services disponibles sur **AWS**, vous devez vous **créer un compte**. Je vous explique ci-dessous comment faire. **Le formulaire d’inscription** : [www.aws.server.com/fr/](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=fr_fr#/start).
@@ -43,6 +43,6 @@ Ces options intéressent surtout les entreprises qui ont besoin de joindre quelq
 ![Amazon Web Service!](/assets/images/blog/blog-aws-inscription-compte.png)
 
 **Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :**
- [Offre gratuite d’AWS](https://aws.amazon.com/fr/free/free-tier/) 
+[Offre gratuite d’AWS](https://aws.amazon.com/fr/free/free-tier/) 
 
 Nous allons voir dans la prochaine étape la création d’une **instance EC2** afin d’y installer la **Stack « LEMP »** `Linux`, `Nginx`, `MySQL`, `PHP`.
