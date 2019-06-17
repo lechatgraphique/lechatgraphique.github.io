@@ -12,17 +12,17 @@ Une fois connecté à votre espace **AWS Management Console** vous avez plusieur
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord.png)
 
-Vous êtes des à présent sur le **tableau de bord Amazon EC2**. Sélectionnez **« Instances »** dans le coin gauche de l’écran.
+Vous êtes dès à présent sur le **tableau de bord Amazon EC2**. Sélectionnez **« Instances »** dans le coin gauche de l’écran.
 
 Nous allons ensuite créer une **nouvelle instance EC2**. Cliquez sur le bouton **Lancer une instance**. 
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2-instance.png)
 
-On vous proposent de choisir une image (AMI). Pour notre installation nous allons choisir **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type** en **64bits (x86)**.
+On vous propose de choisir une image (AMI). Pour notre installation, nous allons choisir **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type** en **64bits (x86)**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png)
 
-Choisissez le type éligible à **l’offre gratuite** puis cliquer sur le bouton **Suivant : Configurer les détails de l’instance**.
+Choisissez le type éligible à **l’offre gratuite** puis cliquez sur le bouton **Suivant : Configurer les détails de l’instance**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-2.png)
 
@@ -32,34 +32,34 @@ Avec **l’offre gratuite** vous avez au **maximum 30 Go d’offert**. Passez à
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-3.png)
 
-Je passe volontairement l’étape des **balises**. Si vous souhaitez **plus d'information** dessus :[Balises des ressources Amazon EC2](https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/).
+Je passe volontairement l’étape des **balises**. Si vous souhaitez **plus d'informations** dessus : [Balises des ressources Amazon EC2](https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/).
 
 Passez à l’étape **Suivante : Configurer le groupe de sécurité**. 
 
-Afin de donner les accès `SSH`, `HTTP`, `HTTS` nous devons établir quelques **règles de connexions**. Créer un nouveau **groupe de sécurité** et **renommer le**. Autoriser les entrées suivante. `SSH`, `HTTP`, `HTTS`.  Une fois terminer cliquer sur **Vérifier et lancer**.
+Afin de donner les accès `SSH`, `HTTP`, `HTTS` nous devons établir quelques **règles de connexions**. Créez un nouveau **groupe de sécurité** et **renommez-le**. Autorisez les entrées suivantes. `SSH`, `HTTP`, `HTTS`.  Une fois terminé, cliquez sur **Vérifier et lancer**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-groups.png)
 
-Vous retrouvez un **récapitulatif**  de toute la configuration de votre **instance EC2**. Passer à l’étape **Suivante : Lancer**.
+Vous retrouvez un **récapitulatif**  de toute la configuration de votre **instance EC2**. Passez à l’étape **Suivante : Lancer**.
 
-On vous demande de sélectionnez une **paire de clés**. Créer une nouvelle **paire de clés**, **nommer la** et **télécharger la**. Enregistrer votre **paire de clés** à un endroit tel que votre dossier `/.ssh` par exemple.
+On vous demande de sélectionner une **paire de clés**. Créez une nouvelle **paire de clés**, **nommez-la** et **téléchargez-la**. Enregistrez votre **paire de clés** à un endroit tel que votre dossier `/.ssh` par exemple.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-5-key.png)
 
-Pour suivre **l’état de votre instance** rendez vous sur le **tableau de bord Amazon EC2** puis sélectionnez vos **instances**.
+Pour suivre **l’état de votre instance** rendez-vous sur le **tableau de bord Amazon EC2** puis sélectionnez vos **instances**.
 
 Vous pouvez voir que l’instance est en **État : Running**. Cela veut dire que tout fonctionne bien.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-6.png)
 
-Un point **très important**. **AWS** vous attribue un **IPv4** pour avoir accès à votre site. Cependant cette IP changera à chaque **redémarrage** du serveur. Vous pouvez pallier à ce problème en attribuant une **IP Elastic** à votre instance.
+Un point **très important**. **AWS** vous attribue un **IPv4** pour avoir accès à votre site. Cependant cette IP changera à chaque **redémarrage** du serveur. Vous pouvez pallier ce problème en attribuant une **IP Elastic** à votre instance.
 
-Aller sur votre le **tableau de bord Amazon EC2**. Sélectionnez « **IP Elastic** » gauche de l’écran. Une fois sur la page cliquez sur le bouton **Allouer une nouvelle adresse**.
+Allez sur votre **tableau de bord Amazon EC2**. Sélectionnez « **IP Elastic** » à gauche de l’écran. Une fois sur la page cliquez sur le bouton **Allouer une nouvelle adresse**.
 
-Laisser le **Pool Amazon** par **défaut** et faite **Allouer**.
+Laissez le **Pool Amazon** par **défaut** et faites **Allouer**.
 
 
-Vous avez créer votre **IP Elastic**. Il vous reste plus cas associer votre **IP à votre Instance EC2**. Clique droit sur votre **IP Elastic** puis **Associer l’adresse**.
+Vous avez créer votre **IP Elastic**. Il ne vous reste plus qu'à associer votre **IP à votre Instance EC2**. Clique droit sur votre **IP Elastic** puis **Associer l’adresse**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic.png)
 
@@ -67,15 +67,15 @@ Dans le menu déroulant choisissez votre **ID d’instance**, puis **Associer**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png)
 
-Retourner dans vos **instances**. Vous remarquerez que votre ancienne **IPv4** a changer. Elle à été remplacer par votre **IP Elastic**.
+Retournez dans vos **instances**. Vous remarquerez que votre ancienne **IPv4** a changé. Elle à été remplacée par votre **IP Elastic**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png)
 
-Des à présent nous somme près à configurer notre **serveur web** en **SSH**.
+Dès à présent nous sommes prêt à configurer notre **serveur web** en **SSH**.
 
-Pour trouver vos identifiant de **connexion SSH** vous devez être sur votre **liste d’instances** et sélectionner votre **instance**. En haut cliquez sur le bouton **Connexion**.
+Pour trouver vos identifiants de **connexion SSH** vous devez être sur votre **liste d’instances** et sélectionner votre **instance**. En haut cliquez sur le bouton **Connexion**.
 
-Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous **connectez en SSH**.
+Une fenêtre s’ouvre en vous indiquant tout ce dont vous avez besoin pour vous **connecter en SSH**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-indentifiant-ssh.png)
 
@@ -101,7 +101,7 @@ Si votre **paire de clés** est dans un dossier spécifique, indiquez le **PATH*
 ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 ```
  
-Vous devez vous retrouvez comme ci-dessous :
+Vous devez vous retrouver comme ci-dessous :
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-terminal.png)
 
@@ -117,7 +117,7 @@ Ensuite, installez le **serveur Nginx**.
 $ sudo apt install nginx
 ```
 
-Une fois **Nginx** installer, tapez **l’adresse de votre site** ou **IP Elastic** dans votre navigateur. 
+Une fois **Nginx** installé, tapez **l’adresse de votre site** ou **IP Elastic** dans votre navigateur. 
 
 La page de destination par défaut de Nginx apparaît :
 
@@ -128,12 +128,12 @@ http://serveur_domaine_ou_ip.com
 
 Si vous voyez la page ci-dessus, vous avez correctement installé **Nginx**.
 
-Étant donnée que **Nginx** ne contient pas de traitement **PHP natif**, contrairement à certains autres serveurs Web, vous devrez installer `php-fpm`, qui signifie « fastCGI process manager ». Nous dirons à Nginx de transmettre les **requêtes PHP** à ce logiciel pour le traitement.
+Étant donné que **Nginx** ne contient pas de traitement **PHP natif**, contrairement à certains autres serveurs Web, vous devrez installer `php-fpm`, qui signifie « fastCGI process manager ». Nous dirons à Nginx de transmettre les **requêtes PHP** à ce logiciel pour le traitement.
 
-Installez les modules `php-fpm`, `php-mysql`, qui permettra à **PHP de communiquer avec votre base de données**. L’installation utilisera les fichiers de base de PHP nécessaires :
+Installez les modules `php-fpm`, `php-mysql`, qui permettront à **PHP de communiquer avec votre base de données**. L’installation utilisera les fichiers de base de PHP nécessaires :
 
 ```
 $ sudo apt install php-fpm php-mysql
 ```
 
-Dans la prochaine étape nous allons **Sécuriser Nginx avec Let’s Encrypt (SSL)**. **Cette étape n’étant pas obligatoire** vous pouvez directement passer à l’étape suivante **« nstaller WordPress sur notre instance EC2 »**. Cependant si vous souhaitez suivre la **sécurisation Nginx** vous devez disposez d’un **nom de domaine**.
+Dans la prochaine étape nous allons **Sécuriser Nginx avec Let’s Encrypt (SSL)**. **Cette étape n’étant pas obligatoire** vous pouvez directement passer à l’étape suivante **« Installer WordPress sur notre instance EC2 »**. Cependant si vous souhaitez suivre la **sécurisation Nginx** vous devez disposer d’un **nom de domaine**.
