@@ -40,3 +40,7 @@ Enfin, nous devons définir les **autorisations appropriées** pour que le **ser
 ```
 sudo chown -R www-data: /var/www/html
 ```
+
+Nous devons également **autoriser MySQL** sur **l'instance EC2**. Connectez-vous à votre **espace AWS** et rendez-vous sur le **tableau de bord Amazon EC2**. Sélectionnez **« Groupes et sécurité »** à gauche de l’écran. Cliquer sur le **groupe RDS** et modifier **les entrées entrantes**. Dans le **champ source** veuillez renseigner **l'ID du groupe serveur EC2** puis **Enregistrer**.
+
+![Amazon Web Service!](/assets/images/blog/blog-aws-rds-groups-mydsl.png)

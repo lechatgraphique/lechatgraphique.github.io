@@ -63,6 +63,10 @@ sudo mv /tmp/wordpress/* /var/www/html
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R www-data: /var/www/html
 </code></pre></div></div>
 
+<p>Nous devons également <strong>autoriser MySQL</strong> sur <strong>l’instance EC2</strong>. Connectez-vous à votre <strong>espace AWS</strong> et rendez-vous sur le <strong>tableau de bord Amazon EC2</strong>. Sélectionnez <strong>« Groupes et sécurité »</strong> à gauche de l’écran. Cliquer sur le <strong>groupe RDS</strong> et modifier <strong>les entrées entrantes</strong>. Dans le <strong>champ source</strong> veuillez renseigner <strong>l’ID du groupe serveur EC2</strong> puis <strong>Enregistrer</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-groups-mydsl.png" alt="Amazon Web Service!" /></p>
+
     </div>
     <div class="post-nav">
         <div>

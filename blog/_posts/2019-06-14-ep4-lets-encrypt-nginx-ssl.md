@@ -35,7 +35,7 @@ sudo apt install python-certbot-nginx
 
 Certbot doit pouvoir trouver le **bloc serveur** correct dans votre **configuration Nginx** pour pouvoir **configurer automatiquement SSL**. Pour ce faire, il recherche une directive `server_name` correspondant au domaine pour lequel vous demandez un **certificat**.
 
-Pour vérifier, ouvrez le fichier du **bloc serveur** de votre domaine.
+Créer et ouvrez le fichier du **bloc serveur** de votre domaine.
 
 ```
 sudo nano /etc/nginx/sites-available/example.com
