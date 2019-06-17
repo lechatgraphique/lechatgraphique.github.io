@@ -18,7 +18,7 @@ Connectez-vous à **compte AWS** et via la **console** rechercher le **service R
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-search-rds.png)
 
-Vous êtes des à présent sur le **tableau de bord Amazon RDS**. Sélectionnez **« Bases de données »** dans le coin gauche de l’écran.
+Vous êtes dès à présent sur le **tableau de bord Amazon RDS**. Sélectionnez **« Bases de données »** dans le coin gauche de l’écran.
 
 Nous allons ensuite créer une **nouvelle instance MySQL**. Cliquez sur le bouton **Créer une base de données**. 
 
@@ -29,13 +29,13 @@ Assurez-vous de sélectionner **MySQL** et de cocher la case **« N’activer q
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-select-mysql.png)
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-select-mysql-opt.png)
 
-Vous vous trouvez dans la page des **spécification de détails de base de données**.
+Vous vous trouvez dans la page des **spécifications de détails de base de données**.
 
-En ce qui concerne les **spécifications de l’instance** vous pouvez laissez les options par **défaut**. Nous allons nous intéressez aux **paramètres**. Renseignezles différents champs demander puis faites **suivant**.
+En ce qui concerne les **spécifications de l’instance** vous pouvez laissez les options par **défaut**. Nous allons nous intéresser aux **paramètres**. Renseignez les différents champs demandés puis faites **suivant**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-params.png)
 
-Dans les options **réseau et sécurité** laisser tout par **défaut**.
+Dans les options **réseau et sécurité** laissez tout par **défaut**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-reseau-securite.png)
 
@@ -45,11 +45,11 @@ Dans les options de **base de données**, nous allons créer le **schéma** pour
 
 Le reste des options tels que **chiffrement**, **sauvegarde**, **supervision** etc. Laissez tout par **défaut** puis cliquer sur le bouton **Créer une base de données**.
 
-Votre instance est en **cours de création**, cela prend quelques minutes avant que soit complètement **opérationnel**.
+Votre instance est en **cours de création**, cela prend quelques minutes avant que ce soit complètement **opérationnel**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-create.png)
 
-Pour suivre **l’état de votre instance** rendez vous sur le **tableau de bord Amazon RDS** puis sélectionnez vos **base de données**.
+Pour suivre **l’état de votre instance** rendez-vous sur le **tableau de bord Amazon RDS** puis sélectionnez vos **bases de données**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-tableau-de-bord-rds-run.png)
 

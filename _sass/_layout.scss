@@ -99,6 +99,10 @@ header {
         }
     }
 }
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+}
 
 .heading-post {
     h2 {

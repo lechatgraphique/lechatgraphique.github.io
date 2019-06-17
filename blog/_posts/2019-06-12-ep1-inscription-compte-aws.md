@@ -38,7 +38,7 @@ Amazon vous demandera quel **plan de support** voulez-vous souscrire.
 
 Ces options intéressent surtout les entreprises qui ont besoin de joindre quelqu’un à tout moment. Dans la majorité des cas, si vous débutez, vous choisirez le **plan basique (gratuit)**.
 
-**Voilà l’inscription est terminé !** Vous pouvez profiter dès maintenant **des services AWS** :) .
+**Voilà l’inscription est terminée !** Vous pouvez profiter dès maintenant **des services AWS** :) .
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-inscription-compte.png)
 
