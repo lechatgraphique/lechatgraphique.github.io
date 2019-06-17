@@ -7,14 +7,14 @@ numberList: "07"
 description: ""
 ---
 
-Afin de sécuriser votre site avec un **Certificat SSL**, vous devez disposez d’un **nom de domaine** entièrement enregistré. J’utiliserai **example.com** tout au long de ce didacticiel.
+Afin de sécuriser votre site avec un **Certificat SSL**, vous devez disposer d’un **nom de domaine** entièrement enregistré. J’utiliserai **example.com** tout au long de ce didacticiel.
 
 Vous devez avoir les **deux enregistrements DNS** et configurés pour votre serveur. 
 
 - Un **enregistrement A** avec **example.com** pointant sur l’adresse **IP publique** de votre serveur.
 - Un **enregistrement A** avec **www.example.com** pointant sur l’adresse **IP publique** de votre serveur.
 
-L'étape qui suis sera l'installation de **Let’s Encrypt** pour obtenir un **certificat SSL**. Dans notre cas nous utiliserons un logiciel **Certbot** sur votre serveur.
+L'étape qui suit sera l'installation de **Let’s Encrypt** pour obtenir un **certificat SSL**. Dans notre cas nous utiliserons un logiciel **Certbot** sur votre serveur.
 
 **Certbot** est en développement très actif. Les développeurs de **Certbot** conservent un référentiel de logiciels Ubuntu avec des versions à jour, nous allons donc utiliser ce référentiel.
 
@@ -66,7 +66,7 @@ server {
 ```
 
 Recherchez la ligne existante `server_name`.
-Mettez-le à jour pour qu’il corresponde à votre nom de domaine.
+Mettez-la à jour pour qu’elle corresponde à votre nom de domaine.
 
 ```
 server_name example.com www.example.com;
@@ -123,7 +123,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 Sélectionnez votre choix puis appuyez sur `ENTRER`. La configuration sera mise à jour et **Nginx** se rechargera pour récupérer les nouveaux paramètres. **Certbot** se terminera par un message vous informant que le processus a abouti et où vos certificats sont stockés.
 
-Les certificats de **Let’s Encrypt** ne sont valides que pendant **90 jours**. Cela encourage les utilisateurs à automatiser leur processus de renouvellement des certificats. Le paquet **Certbot** que nous avons installé s’occupe de cela en ajoutant un **scripT de renouvellement** à /etc/cron.d. Ce script s’exécute deux fois par jour et renouvellera automatiquement tout certificat dans les trente jours suivant l’expiration.
+Les certificats de **Let’s Encrypt** ne sont valides que pendant **90 jours**. Cela encourage les utilisateurs à automatiser leur processus de renouvellement des certificats. Le paquet **Certbot** que nous avons installé s’occupe de cela en ajoutant un **script de renouvellement** à /etc/cron.d. Ce script s’exécute deux fois par jour et renouvellera automatiquement tout certificat dans les trente jours suivant l’expiration.
 
 Pour tester le processus de renouvellement, vous pouvez effectuer un essai à blanc avec **Certbot** :
 
