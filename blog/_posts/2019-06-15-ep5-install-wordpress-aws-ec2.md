@@ -9,7 +9,7 @@ description: ""
 
 Nous arrivons à la fin de ce didactitiel. 
 
-Récapitulation des différentes tâches que nous avons effecturer.
+Récapitulation des différentes tâches que nous avons effectuées.
 
 - Création d'un compte Amazon Web Services
 - Création d'une base de données avec Amazon RDS
@@ -18,7 +18,7 @@ Récapitulation des différentes tâches que nous avons effecturer.
 
 Maintenant nous allons **installer WordPress** sur notre **instance EC2**.
 
-Connectez-vous en à votre instance en **SSH** puis télécharger de **WordPress** :
+Connectez-vous à votre instance en **SSH** puis téléchargez **WordPress** :
 
 ```
 cd /tmp
