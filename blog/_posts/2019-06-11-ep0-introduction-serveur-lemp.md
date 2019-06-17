@@ -19,12 +19,10 @@ Nous allons voir ensemble comment installer et configurer un serveur **« LEMP�
 
 ## Sommaire
 - **Étape 1** : [Créer un compte Amazon Web Services (AWS)](https://lechatgraphique.github.io/blog/ep1-inscription-compte-aws)
-- **Étape 2** : [Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS](https://lechatgraphique.github.io/blog/ep2-instance-ec2-aws-lemp-ubuntu)
-- **Étape 3** : [Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS](https://lechatgraphique.github.io/blog/ep3-lets-encrypt-ssl)
-- **Étape 4** : Créer une base de données MySQL avec RDS
-- **Étape 5** : Installer WordPress sur notre instance EC2
-
-Je mettrais à jour les liens du sommaire au fur et à mesure.
+- **Étape 2** : [Créer une base de données MySQL avec Amazon RDS](https://lechatgraphique.github.io/blog/ep2-creer-base-de-donnees-avec-aws-rds)
+- **Étape 3** : [Créer une instance Amazon EC2 « LEMP » Ubuntu 18.04 LTS](https://lechatgraphique.github.io/blog/ep3-instance-ec2-aws-lemp-ubuntu)
+- **Étape 4** : [Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS](https://lechatgraphique.github.io/blog/ep4-lets-encrypt-nginx-ssl)
+- **Étape 5** : [Installer WordPress sur notre instance EC2](https://lechatgraphique.github.io/blog/ep5-install-wordpress-aws-ec2)
 
 Je vous recommande cepandant de lire le cours **OpenClassRooms** : [« Découvrez le cloud avec Amazon Web Services »](https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services) de **Mathieu Nebra**.
 

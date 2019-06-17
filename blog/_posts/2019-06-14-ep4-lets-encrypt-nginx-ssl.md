@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Étape 03 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS"
+title: "Étape 04 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS"
 date: 2019-06-14 06:00:00 +0200
 image : assets/images/blog/ssl.png
-numberList: "06"
+numberList: "07"
 description: ""
 ---
 

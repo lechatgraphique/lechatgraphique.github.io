@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T08:40:28+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 03 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep3-lets-encrypt-ssl" rel="alternate" type="text/html" title="Étape 03 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS" /><published>2019-06-14T06:00:00+02:00</published><updated>2019-06-14T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep3-lets-encrypt-ssl</id><content type="html" xml:base="http://localhost:4000/blog/ep3-lets-encrypt-ssl">&lt;p&gt;Afin de sécuriser votre site avec un &lt;strong&gt;Certificat SSL&lt;/strong&gt;, vous devez disposez d’un &lt;strong&gt;nom de domaine&lt;/strong&gt; entièrement enregistré. J’utiliserai &lt;strong&gt;example.com&lt;/strong&gt; tout au long de ce didacticiel.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T13:28:30+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 05 _ Installer WordPress sur notre instance EC2</title><link href="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2" rel="alternate" type="text/html" title="Étape 05 _ Installer WordPress sur notre instance EC2" /><published>2019-06-15T06:00:00+02:00</published><updated>2019-06-15T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep5-install-wordpress-aws-ec2</id><content type="html" xml:base="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2">&lt;p&gt;Nous arrivons à la fin de ce didactitiel.&lt;/p&gt;
+
+&lt;p&gt;Récapitulation des différentes tâches que nous avons effecturer.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Création d’un compte Amazon Web Services&lt;/li&gt;
+  &lt;li&gt;Création d’une base de données avec Amazon RDS&lt;/li&gt;
+  &lt;li&gt;Création d’une instance Amazon EC2&lt;/li&gt;
+  &lt;li&gt;Configuration SSL Nginx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Maintenant nous allons &lt;strong&gt;installer WordPress&lt;/strong&gt; sur notre &lt;strong&gt;instance EC2&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Connectez-vous en à votre instance en &lt;strong&gt;SSH&lt;/strong&gt; puis télécharger de &lt;strong&gt;WordPress&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /tmp
+wget https://wordpress.org/latest.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Une fois le téléchargement terminé, extrayez l’archive WordPress et déplacez les fichiers extraits dans le répertoire racine :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar xf latest.tar.gz
+sudo mv /tmp/wordpress/* /var/www/html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Enfin, nous devons définir les &lt;strong&gt;autorisations appropriées&lt;/strong&gt; pour que le &lt;strong&gt;serveur Web&lt;/strong&gt; puisse avoir un accès complet aux fichiers et &lt;strong&gt;répertoires du site&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Étant donné que &lt;strong&gt;Nginx&lt;/strong&gt; et &lt;strong&gt;PHP&lt;/strong&gt; s’exécutent en tant qu’utilisateur et groupe &lt;strong&gt;www-data&lt;/strong&gt;, pour définir les &lt;strong&gt;autorisations appropriées&lt;/strong&gt;, exécutez la commande &lt;strong&gt;chown&lt;/strong&gt; suivante :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chown -R www-data: /var/www/html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">Nous arrivons à la fin de ce didactitiel.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/wordpress.png" /></entry><entry><title type="html">Étape 04 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep4-lets-encrypt-nginx-ssl" rel="alternate" type="text/html" title="Étape 04 _ Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS" /><published>2019-06-14T06:00:00+02:00</published><updated>2019-06-14T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep4-lets-encrypt-nginx-ssl</id><content type="html" xml:base="http://localhost:4000/blog/ep4-lets-encrypt-nginx-ssl">&lt;p&gt;Afin de sécuriser votre site avec un &lt;strong&gt;Certificat SSL&lt;/strong&gt;, vous devez disposez d’un &lt;strong&gt;nom de domaine&lt;/strong&gt; entièrement enregistré. J’utiliserai &lt;strong&gt;example.com&lt;/strong&gt; tout au long de ce didacticiel.&lt;/p&gt;
 
 &lt;p&gt;Vous devez avoir les &lt;strong&gt;deux enregistrements DNS&lt;/strong&gt; et configurés pour votre serveur.&lt;/p&gt;
 
@@ -112,88 +142,59 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo certbot renew --dry-run
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Si vous ne voyez aucune erreur, vous êtes prêt. Si nécessaire, &lt;strong&gt;Certbot&lt;/strong&gt; renouvellera vos certificats et rechargera &lt;strong&gt;Nginx&lt;/strong&gt; pour prendre en compte les modifications. En cas d’échec du processus de renouvellement automatique, &lt;strong&gt;Let’s Encrypt&lt;/strong&gt; enverra un message au courrier électronique que vous avez spécifié pour vous avertir de l’expiration de votre certificat.&lt;/p&gt;</content><author><name></name></author><summary type="html">Afin de sécuriser votre site avec un Certificat SSL, vous devez disposez d’un nom de domaine entièrement enregistré. J’utiliserai example.com tout au long de ce didacticiel.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/ssl.png" /></entry><entry><title type="html">Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep2-instance-ec2-aws-lemp-ubuntu" rel="alternate" type="text/html" title="Étape 02 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS" /><published>2019-06-13T06:00:00+02:00</published><updated>2019-06-13T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep2-instance-ec2-aws-lemp-ubuntu</id><content type="html" xml:base="http://localhost:4000/blog/ep2-instance-ec2-aws-lemp-ubuntu">&lt;p&gt;Aujourd’hui nous allons voir comment lancer et configurer notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt; via la &lt;strong&gt;console AWS&lt;/strong&gt;. Une fois l’instance disponible nous lancerons le terminal afin de se &lt;strong&gt;connecter en SSH&lt;/strong&gt; et installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Si vous ne voyez aucune erreur, vous êtes prêt. Si nécessaire, &lt;strong&gt;Certbot&lt;/strong&gt; renouvellera vos certificats et rechargera &lt;strong&gt;Nginx&lt;/strong&gt; pour prendre en compte les modifications. En cas d’échec du processus de renouvellement automatique, &lt;strong&gt;Let’s Encrypt&lt;/strong&gt; enverra un message au courrier électronique que vous avez spécifié pour vous avertir de l’expiration de votre certificat.&lt;/p&gt;</content><author><name></name></author><summary type="html">Afin de sécuriser votre site avec un Certificat SSL, vous devez disposez d’un nom de domaine entièrement enregistré. J’utiliserai example.com tout au long de ce didacticiel.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/ssl.png" /></entry><entry><title type="html">Étape 03 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS</title><link href="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu" rel="alternate" type="text/html" title="Étape 03 _ Créer une instance EC2 « LEMP » Ubuntu 18.04 LTS" /><published>2019-06-14T06:00:00+02:00</published><updated>2019-06-14T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu</id><content type="html" xml:base="http://localhost:4000/blog/ep3-instance-ec2-aws-lemp-ubuntu">&lt;p&gt;Aujourd’hui nous allons voir comment lancer et configurer notre &lt;strong&gt;instance Amazon EC2&lt;/strong&gt;. Une fois l’instance disponible nous lancerons le &lt;strong&gt;terminal&lt;/strong&gt; afin de se connecter en &lt;strong&gt;SSH&lt;/strong&gt; et installer la &lt;strong&gt;Stack « LEMP »&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Une fois connecté à votre espace &lt;strong&gt;AWS Management Console&lt;/strong&gt; vous avez plusieurs options pour sélectionner un service. Soit par la recherche en tapant un &lt;strong&gt;mot-clé&lt;/strong&gt; ou dans la liste des &lt;strong&gt;Services AWS&lt;/strong&gt;. Rechercher le mot &lt;strong&gt;EC2&lt;/strong&gt; et &lt;strong&gt;cliquer dessus&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Une fois connecté à votre espace &lt;strong&gt;AWS Management Console&lt;/strong&gt; vous avez plusieurs options pour sélectionner un service. Soit par la recherche en tapant un &lt;strong&gt;mot-clé&lt;/strong&gt; ou dans la liste des &lt;strong&gt;Services AWS&lt;/strong&gt;. Rechercher le mot &lt;strong&gt;EC2&lt;/strong&gt; et cliquer dessus.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Vous vous trouvez à présent sur le &lt;strong&gt;tableau de bord EC2&lt;/strong&gt;. Avant de lancer une instance nous allons créer deux choses indispensables :&lt;/p&gt;
+&lt;p&gt;Vous êtes des à présent sur le &lt;strong&gt;tableau de bord Amazon EC2&lt;/strong&gt;. Sélectionnez &lt;strong&gt;« Instances »&lt;/strong&gt; dans le coin gauche de l’écran.&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Une paire de clés afin de vous connecter en &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Un groupe de sécurité  pour les accès &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTPS&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Nous allons ensuite créer une &lt;strong&gt;nouvelle instance EC2&lt;/strong&gt;. Cliquez sur le bouton &lt;strong&gt;Lancer une instance&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2-instance.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Commençons par la &lt;strong&gt;paire de clés&lt;/strong&gt;. Dans le menu à gauche allez dans &lt;strong&gt;Réseau et Sécurité&lt;/strong&gt; puis &lt;strong&gt;Paire de clés&lt;/strong&gt;. 
-Cliquez sur &lt;strong&gt;Créer une paire de clés&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Donnez-lui un &lt;strong&gt;nom&lt;/strong&gt; puis &lt;strong&gt;créer&lt;/strong&gt; votre &lt;strong&gt;pair de clés&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Il vous demandera de &lt;strong&gt;télécharger un fichier en .pem&lt;/strong&gt;.
-&lt;strong&gt;Enregistrer&lt;/strong&gt; à l’endroit que vous souhaitez. &lt;strong&gt;Évité de la laisser dans votre dossier téléchargement&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-paire-key-3.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nous allons passer à l’étape suivantes. &lt;strong&gt;Groupe de sécurité EC2&lt;/strong&gt;.
-Rendez-vous dans le menu de gauche &lt;strong&gt;Réseau et Sécurité&lt;/strong&gt; puis &lt;strong&gt;Groupes de sécurité&lt;/strong&gt;. Comme pour la &lt;strong&gt;paire de clés&lt;/strong&gt;, cliquez sur &lt;strong&gt;Créer un groupe de sécurité&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Renseignez le &lt;strong&gt;nom du groupe&lt;/strong&gt; avec une &lt;strong&gt;description&lt;/strong&gt; puis laissez le &lt;strong&gt;VPS&lt;/strong&gt; par &lt;strong&gt;défaut&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nous devons autoriser les entrées suivantes. &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTS&lt;/code&gt;.  Une fois terminé cliquez sur &lt;strong&gt;Créer&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-group-security.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nous avons terminé la configuration de notre &lt;strong&gt;paire de clés&lt;/strong&gt; et notre &lt;strong&gt;groupe de sécurité&lt;/strong&gt; ! 
-Maintenant il est temps de lancer notre &lt;strong&gt;instance EC2&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Retournez sur le &lt;strong&gt;tableau de bord EC2&lt;/strong&gt;, puis cliquez sur &lt;strong&gt;lancer une instance&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;On vous proposent de choisir une &lt;strong&gt;image (AMI)&lt;/strong&gt;. Nous allons choisir &lt;strong&gt;Ubuntu Server 18.04 LTS (HVM), SSD Volume Type&lt;/strong&gt; en &lt;strong&gt;64bits (x86)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On vous proposent de choisir une image (AMI). Pour notre installation nous allons choisir &lt;strong&gt;Ubuntu Server 18.04 LTS (HVM), SSD Volume Type&lt;/strong&gt; en &lt;strong&gt;64bits (x86)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Choisissez le type éligible à &lt;strong&gt;l’offre gratuite&lt;/strong&gt; puis faite &lt;strong&gt;Suivant : Configurer les détails de l’instance&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Choisissez le type éligible à &lt;strong&gt;l’offre gratuite&lt;/strong&gt; puis cliquer sur le bouton &lt;strong&gt;Suivant : Configurer les détails de l’instance&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Vous n’avez rien de particulier à faire sur cette configuration. Passez à l’étape &lt;strong&gt;Suivante : Ajouter du stockage&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vous n’avez rien de particulier à faire sur cette page de configurations. Passez à l’étape &lt;strong&gt;Suivante : Ajouter du stockage&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Avec &lt;strong&gt;l’offre gratuite&lt;/strong&gt; vous avez au &lt;strong&gt;maximum 30 Go d’offert&lt;/strong&gt;. Passez à l’étape &lt;strong&gt;Suivante : Ajouter des balises&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-3.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Je passe volontairement l’étape des &lt;strong&gt;balises&lt;/strong&gt;. Si vous souhaitez plus d’information dessus : &lt;a href=&quot;https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/&quot;&gt;Balises des ressources Amazon EC2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Je passe volontairement l’étape des &lt;strong&gt;balises&lt;/strong&gt;. Si vous souhaitez &lt;strong&gt;plus d’information&lt;/strong&gt; dessus :&lt;a href=&quot;https://aws.amazon.com/fr/premiumsupport/knowledge-center/ec2-resource-tags/&quot;&gt;Balises des ressources Amazon EC2&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Passez à l’étape &lt;strong&gt;Suivante : Configurer le groupe de sécurité&lt;/strong&gt;. Comme nous avons déjà crée notre &lt;strong&gt;groupe de sécurité&lt;/strong&gt;, nous avons juste à sélectionner un &lt;strong&gt;groupe de sécurité existant&lt;/strong&gt; et cocher notre &lt;strong&gt;ID de groupe de sécurité&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Passez à l’étape &lt;strong&gt;Suivante : Configurer le groupe de sécurité&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Afin de donner les accès &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTS&lt;/code&gt; nous devons établir quelques &lt;strong&gt;règles de connexions&lt;/strong&gt;. Créer un nouveau &lt;strong&gt;groupe de sécurité&lt;/strong&gt; et &lt;strong&gt;renommer le&lt;/strong&gt;. Autoriser les entrées suivante. &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTS&lt;/code&gt;.  Une fois terminer cliquer sur &lt;strong&gt;Vérifier et lancer&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Cliquez sur &lt;strong&gt;Vérifier et lancer&lt;/strong&gt;. Vous y retrovuerez un récapitulatif de toute la configuration de votre &lt;strong&gt;Instance EC2&lt;/strong&gt;. Passez à l’étape &lt;strong&gt;Suivante : Lancer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-groups.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;On vous demande de sélectionner une &lt;strong&gt;paire de clés&lt;/strong&gt;. Comme nous l’avons fait au préalable, choisissez votre &lt;strong&gt;clés&lt;/strong&gt; et &lt;strong&gt;Lancer votre instance&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vous retrouvez un &lt;strong&gt;récapitulatif&lt;/strong&gt;  de toute la configuration de votre &lt;strong&gt;instance EC2&lt;/strong&gt;. Passer à l’étape &lt;strong&gt;Suivante : Lancer&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-5.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;On vous demande de sélectionnez une &lt;strong&gt;paire de clés&lt;/strong&gt;. Créer une nouvelle &lt;strong&gt;paire de clés&lt;/strong&gt;, &lt;strong&gt;nommer la&lt;/strong&gt; et &lt;strong&gt;télécharger la&lt;/strong&gt;. Enregistrer votre &lt;strong&gt;paire de clés&lt;/strong&gt; à un endroit tel que votre dossier &lt;code class=&quot;highlighter-rouge&quot;&gt;/.ssh&lt;/code&gt; par exemple.&lt;/p&gt;
 
-&lt;p&gt;Voila votre instance est en cours de lancement. Allez sur &lt;strong&gt;Afficher les instance&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-5-key.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour suivre &lt;strong&gt;l’état de votre instance&lt;/strong&gt; rendez vous sur le &lt;strong&gt;tableau de bord Amazon EC2&lt;/strong&gt; puis sélectionnez vos &lt;strong&gt;instances&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Vous pouvez voir que l’instance est en &lt;strong&gt;État : Running&lt;/strong&gt;. Cela veut dire que tout fonctionne bien.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-6.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Un point très &lt;strong&gt;important&lt;/strong&gt;. &lt;strong&gt;AWS&lt;/strong&gt; vous attribue un &lt;strong&gt;IPv4&lt;/strong&gt; pour avoir accès à votre site. Cependant cette IP changera à chaque redémarrage du serveur. Vous pouvez pallier à ce problème en attribuant une &lt;strong&gt;IP Elastic&lt;/strong&gt; à votre instance ce qui aura pour effet d’avoir une &lt;strong&gt;IP Fixe&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Un point &lt;strong&gt;très important&lt;/strong&gt;. &lt;strong&gt;AWS&lt;/strong&gt; vous attribue un &lt;strong&gt;IPv4&lt;/strong&gt; pour avoir accès à votre site. Cependant cette IP changera à chaque &lt;strong&gt;redémarrage&lt;/strong&gt; du serveur. Vous pouvez pallier à ce problème en attribuant une &lt;strong&gt;IP Elastic&lt;/strong&gt; à votre instance.&lt;/p&gt;
 
-&lt;p&gt;Allez dans le menu de gauche dans &lt;strong&gt;Réseau et sécurité&lt;/strong&gt; puis &lt;strong&gt;Adresse IP Elastic&lt;/strong&gt;. &lt;strong&gt;Allouer une nouvelle adresse&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Aller sur votre le &lt;strong&gt;tableau de bord Amazon EC2&lt;/strong&gt;. Sélectionnez « &lt;strong&gt;IP Elastic&lt;/strong&gt; » gauche de l’écran. Une fois sur la page cliquez sur le bouton &lt;strong&gt;Allouer une nouvelle adresse&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Laissez le &lt;strong&gt;Pool Amazon&lt;/strong&gt; par &lt;strong&gt;défaut&lt;/strong&gt; et faite &lt;strong&gt;Allouer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Laisser le &lt;strong&gt;Pool Amazon&lt;/strong&gt; par &lt;strong&gt;défaut&lt;/strong&gt; et faite &lt;strong&gt;Allouer&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Vous avez crée votre &lt;strong&gt;IP Fixe&lt;/strong&gt;. Il vous reste plus qu’à &lt;strong&gt;associer votre IP&lt;/strong&gt; à votre &lt;strong&gt;Instance EC2&lt;/strong&gt;. &lt;strong&gt;Clique droit&lt;/strong&gt; sur votre &lt;strong&gt;IP Elastic&lt;/strong&gt; puis &lt;strong&gt;Associer l’adresse&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Vous avez créer votre &lt;strong&gt;IP Elastic&lt;/strong&gt;. Il vous reste plus cas associer votre &lt;strong&gt;IP à votre Instance EC2&lt;/strong&gt;. Clique droit sur votre &lt;strong&gt;IP Elastic&lt;/strong&gt; puis &lt;strong&gt;Associer l’adresse&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
@@ -201,18 +202,23 @@ Maintenant il est temps de lancer notre &lt;strong&gt;instance EC2&lt;/strong&gt
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-1.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Retournez dans vos instances. Vous remarquerez que votre ancienne &lt;strong&gt;IPv4&lt;/strong&gt; a changé et devenue bleu. Elle à été remplacé par votre &lt;strong&gt;IP Elastic&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Retourner dans vos &lt;strong&gt;instances&lt;/strong&gt;. Vous remarquerez que votre ancienne &lt;strong&gt;IPv4&lt;/strong&gt; a changer. Elle à été remplacer par votre &lt;strong&gt;IP Elastic&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ip-elastic-2.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nous en avons fini sur la configuration et le lancement de notre instance &lt;strong&gt;Amazon EC2&lt;/strong&gt;. Dès à présent nous sommes près à configurer notre &lt;strong&gt;serveur web&lt;/strong&gt; en &lt;strong&gt;SSH&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Des à présent nous somme près à configurer notre &lt;strong&gt;serveur web&lt;/strong&gt; en &lt;strong&gt;SSH&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Pour trouver vos identifiants de connexion &lt;strong&gt;SSH&lt;/strong&gt; vous devez sélectionner votre instance. En haut de votre navigateur cliquer sur le bouton connexion.
-Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous connectez en &lt;strong&gt;SSH&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Pour trouver vos identifiant de &lt;strong&gt;connexion SSH&lt;/strong&gt; vous devez être sur votre &lt;strong&gt;liste d’instances&lt;/strong&gt; et sélectionner votre &lt;strong&gt;instance&lt;/strong&gt;. En haut cliquez sur le bouton &lt;strong&gt;Connexion&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous &lt;strong&gt;connectez en SSH&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-indentifiant-ssh.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ouvrez votre &lt;strong&gt;terminal&lt;/strong&gt;. Votre clé ne doit pas être visible publiquement pour que SSH fonctionne. Utilisez cette commande :&lt;/p&gt;
+&lt;p&gt;Ouvrez votre &lt;strong&gt;terminal&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Votre clé ne doit pas être visible publiquement pour que SSH fonctionne.&lt;/p&gt;
+
+&lt;p&gt;Utilisez cette commande :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod 400 votre_paire_de_clés.pem
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -222,7 +228,7 @@ Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i &quot;votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Si votre paire de clés est dans un dossier spécifique, indiquez le &lt;strong&gt;PATH&lt;/strong&gt; complet. Par exemple :&lt;/p&gt;
+&lt;p&gt;Si votre &lt;strong&gt;paire de clés&lt;/strong&gt; est dans un dossier spécifique, indiquez le &lt;strong&gt;PATH&lt;/strong&gt; complet. Par exemple :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i &quot;/Users/bastienclement/Documents/votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -236,36 +242,77 @@ Une fenêtre s’ouvre en vous indiquant tout ce que vous avez besoin pour vous 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Ensuite, &lt;strong&gt;installez&lt;/strong&gt; le serveur Nginx.&lt;/p&gt;
+&lt;p&gt;Ensuite, installez le &lt;strong&gt;serveur Nginx&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install nginx
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install nginx
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Une fois &lt;strong&gt;Nginx&lt;/strong&gt; installer, tapez &lt;strong&gt;l’adresse de votre site&lt;/strong&gt; ou &lt;strong&gt;IP Elastic&lt;/strong&gt; dans votre navigateur. La page de destination par défaut de Nginx apparaît :&lt;/p&gt;
+&lt;p&gt;Une fois &lt;strong&gt;Nginx&lt;/strong&gt; installer, tapez &lt;strong&gt;l’adresse de votre site&lt;/strong&gt; ou &lt;strong&gt;IP Elastic&lt;/strong&gt; dans votre navigateur.&lt;/p&gt;
+
+&lt;p&gt;La page de destination par défaut de Nginx apparaît :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://serveur_domaine_ou_ip.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-page-nginx.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Si vous voyez la page ci-dessus, vous avez correctement installé Nginx.&lt;/p&gt;
+&lt;p&gt;Si vous voyez la page ci-dessus, vous avez correctement installé &lt;strong&gt;Nginx&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Maintenant que vous avez votre serveur Web, vous devez installer &lt;strong&gt;MySQL&lt;/strong&gt;. Dans notre cas nous installons juste les dépendances afin de connecter plus tard notre base de données &lt;strong&gt;Amazon RDS.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Étant donnée que &lt;strong&gt;Nginx&lt;/strong&gt; ne contient pas de traitement &lt;strong&gt;PHP natif&lt;/strong&gt;, contrairement à certains autres serveurs Web, vous devrez installer &lt;code class=&quot;highlighter-rouge&quot;&gt;php-fpm&lt;/code&gt;, qui signifie « fastCGI process manager ». Nous dirons à Nginx de transmettre les &lt;strong&gt;requêtes PHP&lt;/strong&gt; à ce logiciel pour le traitement.&lt;/p&gt;
 
-&lt;p&gt;Installez &lt;strong&gt;MySQL Server&lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;Installez les modules &lt;code class=&quot;highlighter-rouge&quot;&gt;php-fpm&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;php-mysql&lt;/code&gt;, qui permettra à &lt;strong&gt;PHP de communiquer avec votre base de données&lt;/strong&gt;. L’installation utilisera les fichiers de base de PHP nécessaires :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install mysql-server
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt install php-fpm php-mysql
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Vous n’avez rien d’autre à faire pour &lt;strong&gt;MySQL&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Dans la prochaine étape nous allons &lt;strong&gt;Sécuriser Nginx avec Let’s Encrypt (SSL)&lt;/strong&gt;. &lt;strong&gt;Cette étape n’étant pas obligatoire&lt;/strong&gt; vous pouvez directement passer à l’étape suivante &lt;strong&gt;« nstaller WordPress sur notre instance EC2 »&lt;/strong&gt;. Cependant si vous souhaitez suivre la &lt;strong&gt;sécurisation Nginx&lt;/strong&gt; vous devez disposez d’un &lt;strong&gt;nom de domaine&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Aujourd’hui nous allons voir comment lancer et configurer notre instance Amazon EC2. Une fois l’instance disponible nous lancerons le terminal afin de se connecter en SSH et installer la Stack « LEMP ».</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/server.png" /></entry><entry><title type="html">Étape 02 _ Créer une base de données MySQL avec RDS</title><link href="http://localhost:4000/blog/ep2-creer-base-de-donnees-avec-aws-rds" rel="alternate" type="text/html" title="Étape 02 _ Créer une base de données MySQL avec RDS" /><published>2019-06-13T06:00:00+02:00</published><updated>2019-06-13T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep2-creer-base-de-donnees-avec-aws-rds</id><content type="html" xml:base="http://localhost:4000/blog/ep2-creer-base-de-donnees-avec-aws-rds">&lt;p&gt;Dans cette &lt;strong&gt;deuxième étape&lt;/strong&gt; nous allons préparer notre &lt;strong&gt;base de données WordPress&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Étant donnée que &lt;strong&gt;Nginx&lt;/strong&gt; ne contient pas de &lt;strong&gt;traitement PHP&lt;/strong&gt; natif, contrairement à certains autres &lt;strong&gt;serveurs Web&lt;/strong&gt;, vous devrez installer &lt;code class=&quot;highlighter-rouge&quot;&gt;php-fpm&lt;/code&gt;, qui signifie &lt;strong&gt;« fastCGI process manager »&lt;/strong&gt;. Nous dirons à Nginx de transmettre les requêtes PHP à ce logiciel pour le traitement.&lt;/p&gt;
+&lt;p&gt;Nous allons avoir &lt;strong&gt;deux instances distinctes&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;Installez le module &lt;code class=&quot;highlighter-rouge&quot;&gt;php-fpm&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;php-mysql&lt;/code&gt;, qui permettra à PHP de communiquer avec votre base de données. L’installation utilisera les fichiers de base de PHP nécessaires :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Une &lt;strong&gt;instance RDS&lt;/strong&gt; Avec &lt;strong&gt;MySQL&lt;/strong&gt; afin d’héberger nos données &lt;strong&gt;WordPress&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Une &lt;strong&gt;instance EC2&lt;/strong&gt; avec notre &lt;strong&gt;serveur web Nginx&lt;/strong&gt; ainsi que les fichiers sources &lt;strong&gt;WordPress&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt install php-fpm php-mysql
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Connectez-vous à &lt;strong&gt;compte AWS&lt;/strong&gt; et via la &lt;strong&gt;console&lt;/strong&gt; rechercher le &lt;strong&gt;service RDS&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Dans la prochaine étape nous allons &lt;strong&gt;Sécuriser Nginx avec Let’s Encrypt (SSL)&lt;/strong&gt;. &lt;strong&gt;Cette étape n’étant pas obligatoire&lt;/strong&gt; vous pouvez directement passer à l’étape &lt;strong&gt;« Créer une base de données MySQL avec RDS »&lt;/strong&gt;. Cepandant si vous souhaitez suivre la &lt;strong&gt;sécurisation Nginx&lt;/strong&gt; vous devez disposez d’un &lt;strong&gt;nom de domaine&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Aujourd’hui nous allons voir comment lancer et configurer notre instance Amazon EC2 via la console AWS. Une fois l’instance disponible nous lancerons le terminal afin de se connecter en SSH et installer la Stack « LEMP ».</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/server.png" /></entry><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-search-rds.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vous êtes des à présent sur le &lt;strong&gt;tableau de bord Amazon RDS&lt;/strong&gt;. Sélectionnez &lt;strong&gt;« Bases de données »&lt;/strong&gt; dans le coin gauche de l’écran.&lt;/p&gt;
+
+&lt;p&gt;Nous allons ensuite créer une &lt;strong&gt;nouvelle instance MySQL&lt;/strong&gt;. Cliquez sur le bouton &lt;strong&gt;Créer une base de données&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-tableau-de-bord-rds.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Assurez-vous de sélectionner &lt;strong&gt;MySQL&lt;/strong&gt; et de cocher la case &lt;strong&gt;« N’activer que les options éligibles pour le niveau d’offre gratuite RDS »&lt;/strong&gt; puis passez à l’étape &lt;strong&gt;suivante&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-select-mysql.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/blog-aws-rds-select-mysql-opt.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Vous vous trouvez dans la page des &lt;strong&gt;spécification de détails de base de données&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;En ce qui concerne les &lt;strong&gt;spécifications de l’instance&lt;/strong&gt; vous pouvez laissez les options par &lt;strong&gt;défaut&lt;/strong&gt;. Nous allons nous intéressez aux &lt;strong&gt;paramètres&lt;/strong&gt;. Renseignezles différents champs demander puis faites &lt;strong&gt;suivant&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-params.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans les options &lt;strong&gt;réseau et sécurité&lt;/strong&gt; laisser tout par &lt;strong&gt;défaut&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-reseau-securite.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dans les options de &lt;strong&gt;base de données&lt;/strong&gt;, nous allons créer le &lt;strong&gt;schéma&lt;/strong&gt; pour notre futur &lt;strong&gt;WordPress&lt;/strong&gt;. Indiquez un &lt;strong&gt;nom de base de données&lt;/strong&gt; puis laissez les autres options par &lt;strong&gt;défaut&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-name-db.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Le reste des options tels que &lt;strong&gt;chiffrement&lt;/strong&gt;, &lt;strong&gt;sauvegarde&lt;/strong&gt;, &lt;strong&gt;supervision&lt;/strong&gt; etc. Laissez tout par &lt;strong&gt;défaut&lt;/strong&gt; puis cliquer sur le bouton &lt;strong&gt;Créer une base de données&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Votre instance est en &lt;strong&gt;cours de création&lt;/strong&gt;, cela prend quelques minutes avant que soit complètement &lt;strong&gt;opérationnel&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-create.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pour suivre &lt;strong&gt;l’état de votre instance&lt;/strong&gt; rendez vous sur le &lt;strong&gt;tableau de bord Amazon RDS&lt;/strong&gt; puis sélectionnez vos &lt;strong&gt;base de données&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-tableau-de-bord-rds-run.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nous reviendrons plus tard dessus après la création de notre &lt;strong&gt;instance Amazon EC2&lt;/strong&gt;. Gardez bien vos &lt;strong&gt;identifiants&lt;/strong&gt;, nous en aurons besoin pour établir la connexion avec notre serveur WordPress.&lt;/p&gt;</content><author><name></name></author><summary type="html">Dans cette deuxième étape nous allons préparer notre base de données WordPress.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/mysql.png" /></entry><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
 Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;/strong&gt;, vous devez vous &lt;strong&gt;créer un compte&lt;/strong&gt;. Je vous explique ci-dessous comment faire. &lt;strong&gt;Le formulaire d’inscription&lt;/strong&gt; : &lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?nc2=h_ct&amp;amp;src=header_signup&amp;amp;redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;amp;language=fr_fr#/start&quot;&gt;www.aws.server.com/fr/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt;, vous pouvez utiliser une partie des &lt;strong&gt;services gratuitement les 12 premiers mois&lt;/strong&gt;.&lt;/p&gt;
@@ -319,13 +366,11 @@ Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;
 &lt;h2 id=&quot;sommaire&quot;&gt;Sommaire&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;Étape 1&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep1-inscription-compte-aws&quot;&gt;Créer un compte Amazon Web Services (AWS)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Étape 2&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep2-instance-ec2-aws-lemp-ubuntu&quot;&gt;Créer une instance EC2 avec « LEMP » Ubuntu 18.04 LTS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Étape 3&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep3-lets-encrypt-ssl&quot;&gt;Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Étape 4&lt;/strong&gt; : Créer une base de données MySQL avec RDS&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Étape 5&lt;/strong&gt; : Installer WordPress sur notre instance EC2&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 2&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep2-creer-base-de-donnees-avec-aws-rds&quot;&gt;Créer une base de données MySQL avec Amazon RDS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 3&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep3-instance-ec2-aws-lemp-ubuntu&quot;&gt;Créer une instance Amazon EC2 « LEMP » Ubuntu 18.04 LTS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 4&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep4-lets-encrypt-nginx-ssl&quot;&gt;Sécuriser Nginx avec Let’s Encrypt (SSL) Ubuntu 18.04 LTS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Étape 5&lt;/strong&gt; : &lt;a href=&quot;https://lechatgraphique.github.io/blog/ep5-install-wordpress-aws-ec2&quot;&gt;Installer WordPress sur notre instance EC2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Je mettrais à jour les liens du sommaire au fur et à mesure.&lt;/p&gt;
 
 &lt;p&gt;Je vous recommande cepandant de lire le cours &lt;strong&gt;OpenClassRooms&lt;/strong&gt; : &lt;a href=&quot;https://openclassrooms.com/fr/courses/4810836-decouvrez-le-cloud-avec-amazon-web-services&quot;&gt;« Découvrez le cloud avec Amazon Web Services »&lt;/a&gt; de &lt;strong&gt;Mathieu Nebra&lt;/strong&gt;.&lt;/p&gt;
 

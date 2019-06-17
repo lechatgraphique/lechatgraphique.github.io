@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+	
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="Apprenez à mettre en place une base de données externe avec Amazon RDS"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet"> 
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head>
+	
+	<body>
+
+		<header>
+    <a href="http://localhost:4000/"><img src="/assets/images/rocketdev.svg" alt="ROCKET.DEV" width="250"></a>
+</header>
+		
+		<div class="post">
+    <div class="heading-post">
+            <img class="thumb" src="http://localhost:4000/assets/images/blog/mysql.png" alt="Étape 02 _ Créer une base de données MySQL avec RDS" width="75" height="75">
+        <h2 class="post-title">Étape 02 _ Créer une base de données MySQL avec RDS</h2>
+        
+        <time class="post-date" datetime="Thu, 13 Jun 2019 06:00:00 +0200">
+            Publié le 13 
+            juin
+                 2019
+        </time>
+    </div>
+    <div style="text-align:justify;">
+        <p>Dans cette <strong>deuxième étape</strong> nous allons préparer notre <strong>base de données WordPress</strong>.</p>
+
+<p>Nous allons avoir <strong>deux instances distinctes</strong> :</p>
+
+<ul>
+  <li>Une <strong>instance RDS</strong> Avec <strong>MySQL</strong> afin d’héberger nos données <strong>WordPress</strong></li>
+  <li>Une <strong>instance EC2</strong> avec notre <strong>serveur web Nginx</strong> ainsi que les fichiers sources <strong>WordPress</strong></li>
+</ul>
+
+<p>Connectez-vous à <strong>compte AWS</strong> et via la <strong>console</strong> rechercher le <strong>service RDS</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-search-rds.png" alt="Amazon Web Service!" /></p>
+
+<p>Vous êtes des à présent sur le <strong>tableau de bord Amazon RDS</strong>. Sélectionnez <strong>« Bases de données »</strong> dans le coin gauche de l’écran.</p>
+
+<p>Nous allons ensuite créer une <strong>nouvelle instance MySQL</strong>. Cliquez sur le bouton <strong>Créer une base de données</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-tableau-de-bord-rds.png" alt="Amazon Web Service!" /></p>
+
+<p>Assurez-vous de sélectionner <strong>MySQL</strong> et de cocher la case <strong>« N’activer que les options éligibles pour le niveau d’offre gratuite RDS »</strong> puis passez à l’étape <strong>suivante</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-select-mysql.png" alt="Amazon Web Service!" />
+<img src="/assets/images/blog/blog-aws-rds-select-mysql-opt.png" alt="Amazon Web Service!" /></p>
+
+<p>Vous vous trouvez dans la page des <strong>spécification de détails de base de données</strong>.</p>
+
+<p>En ce qui concerne les <strong>spécifications de l’instance</strong> vous pouvez laissez les options par <strong>défaut</strong>. Nous allons nous intéressez aux <strong>paramètres</strong>. Renseignezles différents champs demander puis faites <strong>suivant</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-params.png" alt="Amazon Web Service!" /></p>
+
+<p>Dans les options <strong>réseau et sécurité</strong> laisser tout par <strong>défaut</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-reseau-securite.png" alt="Amazon Web Service!" /></p>
+
+<p>Dans les options de <strong>base de données</strong>, nous allons créer le <strong>schéma</strong> pour notre futur <strong>WordPress</strong>. Indiquez un <strong>nom de base de données</strong> puis laissez les autres options par <strong>défaut</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-name-db.png" alt="Amazon Web Service!" /></p>
+
+<p>Le reste des options tels que <strong>chiffrement</strong>, <strong>sauvegarde</strong>, <strong>supervision</strong> etc. Laissez tout par <strong>défaut</strong> puis cliquer sur le bouton <strong>Créer une base de données</strong>.</p>
+
+<p>Votre instance est en <strong>cours de création</strong>, cela prend quelques minutes avant que soit complètement <strong>opérationnel</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-create.png" alt="Amazon Web Service!" /></p>
+
+<p>Pour suivre <strong>l’état de votre instance</strong> rendez vous sur le <strong>tableau de bord Amazon RDS</strong> puis sélectionnez vos <strong>base de données</strong>.</p>
+
+<p><img src="/assets/images/blog/blog-aws-rds-tableau-de-bord-rds-run.png" alt="Amazon Web Service!" /></p>
+
+<p>Nous reviendrons plus tard dessus après la création de notre <strong>instance Amazon EC2</strong>. Gardez bien vos <strong>identifiants</strong>, nous en aurons besoin pour établir la connexion avec notre serveur WordPress.</p>
+
+    </div>
+    <div class="post-nav">
+        <div>
+            
+            <a href="/blog/ep1-inscription-compte-aws">&laquo;&nbsp;Précédent</a>
+            
+        </div>
+        <div class="post-nav-next">
+            
+            <a href="/blog/ep3-instance-ec2-aws-lemp-ubuntu">Suivant&nbsp;&raquo;</a>
+            
+        </div>
+    </div>
+</div>
+
+
+		
+		<footer>
+    <div>
+        <a href="https://fr.linkedin.com/in/bastien-clement" target="_blank">
+            <img src="/assets/images/linkedin.svg" alt="LinkedIn" width="25">
+        </a>
+        <a href="https://www.instagram.com/bc_lechatgraphique/" target="_blank">
+            <img src="/assets/images/instagram.svg" alt="Instagram" width="25">
+        </a>
+        <a href="https://github.com/newlifeofdeveloper" target="_blank">
+            <img src="/assets/images/github.svg" alt="Github" width="25">
+        </a>
+    </div>
+    <div>© 2019 RocketDev inc. by Bastien CLEMENT</div>
+</footer>
+
+	</body>
+</html>

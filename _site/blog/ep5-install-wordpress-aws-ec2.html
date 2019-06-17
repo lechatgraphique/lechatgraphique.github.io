@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+	
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content=""">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"/>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500" rel="stylesheet"> 
+    <script async defer src="https://buttons.github.io/buttons.js"></script> 
+</head>
+	
+	<body>
+
+		<header>
+    <a href="http://localhost:4000/"><img src="/assets/images/rocketdev.svg" alt="ROCKET.DEV" width="250"></a>
+</header>
+		
+		<div class="post">
+    <div class="heading-post">
+            <img class="thumb" src="http://localhost:4000/assets/images/blog/wordpress.png" alt="Étape 05 _ Installer WordPress sur notre instance EC2" width="75" height="75">
+        <h2 class="post-title">Étape 05 _ Installer WordPress sur notre instance EC2</h2>
+        
+        <time class="post-date" datetime="Sat, 15 Jun 2019 06:00:00 +0200">
+            Publié le 15 
+            juin
+                 2019
+        </time>
+    </div>
+    <div style="text-align:justify;">
+        <p>Nous arrivons à la fin de ce didactitiel.</p>
+
+<p>Récapitulation des différentes tâches que nous avons effecturer.</p>
+
+<ul>
+  <li>Création d’un compte Amazon Web Services</li>
+  <li>Création d’une base de données avec Amazon RDS</li>
+  <li>Création d’une instance Amazon EC2</li>
+  <li>Configuration SSL Nginx</li>
+</ul>
+
+<p>Maintenant nous allons <strong>installer WordPress</strong> sur notre <strong>instance EC2</strong>.</p>
+
+<p>Connectez-vous en à votre instance en <strong>SSH</strong> puis télécharger de <strong>WordPress</strong> :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /tmp
+wget https://wordpress.org/latest.tar.gz
+</code></pre></div></div>
+
+<p>Une fois le téléchargement terminé, extrayez l’archive WordPress et déplacez les fichiers extraits dans le répertoire racine :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar xf latest.tar.gz
+sudo mv /tmp/wordpress/* /var/www/html
+</code></pre></div></div>
+
+<p>Enfin, nous devons définir les <strong>autorisations appropriées</strong> pour que le <strong>serveur Web</strong> puisse avoir un accès complet aux fichiers et <strong>répertoires du site</strong>.</p>
+
+<p>Étant donné que <strong>Nginx</strong> et <strong>PHP</strong> s’exécutent en tant qu’utilisateur et groupe <strong>www-data</strong>, pour définir les <strong>autorisations appropriées</strong>, exécutez la commande <strong>chown</strong> suivante :</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chown -R www-data: /var/www/html
+</code></pre></div></div>
+
+    </div>
+    <div class="post-nav">
+        <div>
+            
+            <a href="/blog/ep4-lets-encrypt-nginx-ssl">&laquo;&nbsp;Précédent</a>
+            
+        </div>
+        <div class="post-nav-next">
+            
+        </div>
+    </div>
+</div>
+
+
+		
+		<footer>
+    <div>
+        <a href="https://fr.linkedin.com/in/bastien-clement" target="_blank">
+            <img src="/assets/images/linkedin.svg" alt="LinkedIn" width="25">
+        </a>
+        <a href="https://www.instagram.com/bc_lechatgraphique/" target="_blank">
+            <img src="/assets/images/instagram.svg" alt="Instagram" width="25">
+        </a>
+        <a href="https://github.com/newlifeofdeveloper" target="_blank">
+            <img src="/assets/images/github.svg" alt="Github" width="25">
+        </a>
+    </div>
+    <div>© 2019 RocketDev inc. by Bastien CLEMENT</div>
+</footer>
+
+	</body>
+</html>
