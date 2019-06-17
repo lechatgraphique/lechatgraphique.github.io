@@ -53,4 +53,4 @@ Pour suivre **l’état de votre instance** rendez-vous sur le **tableau de bord
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-rds-tableau-de-bord-rds-run.png)
 
-Nous reviendrons plus tard dessus après la création de notre **instance Amazon EC2**. Gardez bien vos **identifiants**, nous en aurons besoin pour établir la connexion avec notre serveur WordPress.
+Nous reviendrons plus tard dessus après la création de notre **instance Amazon EC2**. Gardez bien vos **identifiants**, nous en aurons besoin pour établir la connexion avec notre serveur **WordPress**.

@@ -43,7 +43,7 @@
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2-instance.png" alt="Amazon Web Service!" /></p>
 
-<p>On vous propose de choisir une image (AMI). Pour notre installation, nous allons choisir <strong>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type</strong> en <strong>64bits (x86)</strong>.</p>
+<p>On vous propose de choisir une <strong>image (AMI)</strong>. Pour notre installation, nous allons choisir <strong>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type</strong> en <strong>64bits (x86)</strong>.</p>
 
 <p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png" alt="Amazon Web Service!" /></p>
 
@@ -63,7 +63,7 @@
 
 <p>Afin de donner les accès <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTS</code> nous devons établir quelques <strong>règles de connexions</strong>. Créez un nouveau <strong>groupe de sécurité</strong> et <strong>renommez-le</strong>. Autorisez les entrées suivantes. <code class="highlighter-rouge">SSH</code>, <code class="highlighter-rouge">HTTP</code>, <code class="highlighter-rouge">HTTS</code>.  Une fois terminé, cliquez sur <strong>Vérifier et lancer</strong>.</p>
 
-<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-groups.png" alt="Amazon Web Service!" /></p>
+<p><img src="/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-goups.png" alt="Amazon Web Service!" /></p>
 
 <p>Vous retrouvez un <strong>récapitulatif</strong>  de toute la configuration de votre <strong>instance EC2</strong>. Passez à l’étape <strong>Suivante : Lancer</strong>.</p>
 
@@ -105,21 +105,21 @@
 
 <p>Ouvrez votre <strong>terminal</strong>.</p>
 
-<p>Votre clé ne doit pas être visible publiquement pour que SSH fonctionne.</p>
+<p>Votre clé ne doit pas être visible publiquement pour que <strong>SSH</strong> fonctionne.</p>
 
 <p>Utilisez cette commande :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod 400 votre_paire_de_clés.pem
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 400 votre_paire_de_clés.pem
 </code></pre></div></div>
 
 <p>Puis connectez-vous en <strong>SSH</strong> :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i "votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -i "votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 </code></pre></div></div>
 
 <p>Si votre <strong>paire de clés</strong> est dans un dossier spécifique, indiquez le <strong>PATH</strong> complet. Par exemple :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 </code></pre></div></div>
 
 <p>Vous devez vous retrouver comme ci-dessous :</p>
@@ -128,7 +128,7 @@
 
 <p>Commencez à mettre à jour <strong>l’index des paquets</strong> de votre serveur.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt update
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt update
 </code></pre></div></div>
 
 <p>Ensuite, installez le <strong>serveur Nginx</strong>.</p>
@@ -180,7 +180,7 @@
         <a href="https://www.instagram.com/bc_lechatgraphique/" target="_blank">
             <img src="/assets/images/instagram.svg" alt="Instagram" width="25">
         </a>
-        <a href="https://github.com/newlifeofdeveloper" target="_blank">
+        <a href="https://github.com/lechatgraphique" target="_blank">
             <img src="/assets/images/github.svg" alt="Github" width="25">
         </a>
     </div>

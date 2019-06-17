@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T17:15:24+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 05 _ Installer WordPress sur notre instance EC2</title><link href="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2" rel="alternate" type="text/html" title="Étape 05 _ Installer WordPress sur notre instance EC2" /><published>2019-06-15T06:00:00+02:00</published><updated>2019-06-15T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep5-install-wordpress-aws-ec2</id><content type="html" xml:base="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2">&lt;p&gt;Nous arrivons à la fin de ce didactitiel.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-17T18:03:42+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">RocketDev • Blog developer</title><subtitle>À travers ce blog je souhaite partager mon nouveau défi de devir développeur d’applications web (back end). </subtitle><entry><title type="html">Étape 05 _ Installer WordPress sur notre instance EC2</title><link href="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2" rel="alternate" type="text/html" title="Étape 05 _ Installer WordPress sur notre instance EC2" /><published>2019-06-15T06:00:00+02:00</published><updated>2019-06-15T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep5-install-wordpress-aws-ec2</id><content type="html" xml:base="http://localhost:4000/blog/ep5-install-wordpress-aws-ec2">&lt;p&gt;Nous arrivons à la fin de ce didactitiel.&lt;/p&gt;
 
-&lt;p&gt;Récapitulation des différentes tâches que nous avons effectuées.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Récapitulation&lt;/strong&gt; des différentes tâches que nous avons effectuées.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Création d’un compte Amazon Web Services&lt;/li&gt;
-  &lt;li&gt;Création d’une base de données avec Amazon RDS&lt;/li&gt;
-  &lt;li&gt;Création d’une instance Amazon EC2&lt;/li&gt;
-  &lt;li&gt;Configuration SSL Nginx&lt;/li&gt;
+  &lt;li&gt;Création d’un compte &lt;strong&gt;Amazon Web Services&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Création d’une &lt;strong&gt;base de données&lt;/strong&gt; avec &lt;strong&gt;Amazon RDS&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Création d’une &lt;strong&gt;instance Amazon EC2&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Configuration &lt;strong&gt;SSL Nginx&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Maintenant nous allons &lt;strong&gt;installer WordPress&lt;/strong&gt; sur notre &lt;strong&gt;instance EC2&lt;/strong&gt;.&lt;/p&gt;
@@ -17,7 +17,7 @@
 wget https://wordpress.org/latest.tar.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Une fois le téléchargement terminé, extrayez l’archive WordPress et déplacez les fichiers extraits dans le répertoire racine :&lt;/p&gt;
+&lt;p&gt;Une fois le téléchargement terminé, extrayez l’archive &lt;strong&gt;WordPress&lt;/strong&gt; et déplacez les fichiers extraits dans le &lt;strong&gt;répertoire racine&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar xf latest.tar.gz
 sudo mv /tmp/wordpress/* /var/www/html
@@ -154,7 +154,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2-instance.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;On vous propose de choisir une image (AMI). Pour notre installation, nous allons choisir &lt;strong&gt;Ubuntu Server 18.04 LTS (HVM), SSD Volume Type&lt;/strong&gt; en &lt;strong&gt;64bits (x86)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;On vous propose de choisir une &lt;strong&gt;image (AMI)&lt;/strong&gt;. Pour notre installation, nous allons choisir &lt;strong&gt;Ubuntu Server 18.04 LTS (HVM), SSD Volume Type&lt;/strong&gt; en &lt;strong&gt;64bits (x86)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
@@ -174,7 +174,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 &lt;p&gt;Afin de donner les accès &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTS&lt;/code&gt; nous devons établir quelques &lt;strong&gt;règles de connexions&lt;/strong&gt;. Créez un nouveau &lt;strong&gt;groupe de sécurité&lt;/strong&gt; et &lt;strong&gt;renommez-le&lt;/strong&gt;. Autorisez les entrées suivantes. &lt;code class=&quot;highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTS&lt;/code&gt;.  Une fois terminé, cliquez sur &lt;strong&gt;Vérifier et lancer&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-groups.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-goups.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vous retrouvez un &lt;strong&gt;récapitulatif&lt;/strong&gt;  de toute la configuration de votre &lt;strong&gt;instance EC2&lt;/strong&gt;. Passez à l’étape &lt;strong&gt;Suivante : Lancer&lt;/strong&gt;.&lt;/p&gt;
 
@@ -216,21 +216,21 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 &lt;p&gt;Ouvrez votre &lt;strong&gt;terminal&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Votre clé ne doit pas être visible publiquement pour que SSH fonctionne.&lt;/p&gt;
+&lt;p&gt;Votre clé ne doit pas être visible publiquement pour que &lt;strong&gt;SSH&lt;/strong&gt; fonctionne.&lt;/p&gt;
 
 &lt;p&gt;Utilisez cette commande :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chmod 400 votre_paire_de_clés.pem
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ chmod 400 votre_paire_de_clés.pem
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Puis connectez-vous en &lt;strong&gt;SSH&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i &quot;votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -i &quot;votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Si votre &lt;strong&gt;paire de clés&lt;/strong&gt; est dans un dossier spécifique, indiquez le &lt;strong&gt;PATH&lt;/strong&gt; complet. Par exemple :&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i &quot;/Users/bastienclement/Documents/votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ssh -i &quot;/Users/bastienclement/Documents/votre_paire_de_clés.pem&quot; ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Vous devez vous retrouver comme ci-dessous :&lt;/p&gt;
@@ -239,7 +239,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 &lt;p&gt;Commencez à mettre à jour &lt;strong&gt;l’index des paquets&lt;/strong&gt; de votre serveur.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt update
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo apt update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Ensuite, installez le &lt;strong&gt;serveur Nginx&lt;/strong&gt;.&lt;/p&gt;
@@ -312,7 +312,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-rds-tableau-de-bord-rds-run.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Nous reviendrons plus tard dessus après la création de notre &lt;strong&gt;instance Amazon EC2&lt;/strong&gt;. Gardez bien vos &lt;strong&gt;identifiants&lt;/strong&gt;, nous en aurons besoin pour établir la connexion avec notre serveur WordPress.&lt;/p&gt;</content><author><name></name></author><summary type="html">Dans cette deuxième étape nous allons préparer notre base de données WordPress.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/mysql.png" /></entry><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
+&lt;p&gt;Nous reviendrons plus tard dessus après la création de notre &lt;strong&gt;instance Amazon EC2&lt;/strong&gt;. Gardez bien vos &lt;strong&gt;identifiants&lt;/strong&gt;, nous en aurons besoin pour établir la connexion avec notre serveur &lt;strong&gt;WordPress&lt;/strong&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">Dans cette deuxième étape nous allons préparer notre base de données WordPress.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/mysql.png" /></entry><entry><title type="html">Étape 01 _ Créer un compte Amazon Web Serveur (AWS)</title><link href="http://localhost:4000/blog/ep1-inscription-compte-aws" rel="alternate" type="text/html" title="Étape 01 _ Créer un compte Amazon Web Serveur (AWS)" /><published>2019-06-12T06:00:00+02:00</published><updated>2019-06-12T06:00:00+02:00</updated><id>http://localhost:4000/blog/ep1-inscription-compte-aws</id><content type="html" xml:base="http://localhost:4000/blog/ep1-inscription-compte-aws">&lt;p&gt;&lt;img src=&quot;/assets/images/blog/blog-aws-logo.png&quot; alt=&quot;Amazon Web Service!&quot; /&gt;
 Afin d’accéder aux différents services disponibles sur &lt;strong&gt;AWS&lt;/strong&gt;, vous devez vous &lt;strong&gt;créer un compte&lt;/strong&gt;. Je vous explique ci-dessous comment faire. &lt;strong&gt;Le formulaire d’inscription&lt;/strong&gt; : &lt;a href=&quot;https://portal.aws.amazon.com/billing/signup?nc2=h_ct&amp;amp;src=header_signup&amp;amp;redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&amp;amp;language=fr_fr#/start&quot;&gt;www.aws.server.com/fr/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Rappel&lt;/strong&gt;, vous pouvez utiliser une partie des &lt;strong&gt;services gratuitement les 12 premiers mois&lt;/strong&gt;.&lt;/p&gt;

@@ -18,7 +18,7 @@ Nous allons ensuite créer une **nouvelle instance EC2**. Cliquez sur le bouton 
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ec2-instance.png)
 
-On vous propose de choisir une image (AMI). Pour notre installation, nous allons choisir **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type** en **64bits (x86)**.
+On vous propose de choisir une **image (AMI)**. Pour notre installation, nous allons choisir **Ubuntu Server 18.04 LTS (HVM), SSD Volume Type** en **64bits (x86)**.
 
 ![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami.png)
 
@@ -38,7 +38,7 @@ Passez à l’étape **Suivante : Configurer le groupe de sécurité**.
 
 Afin de donner les accès `SSH`, `HTTP`, `HTTS` nous devons établir quelques **règles de connexions**. Créez un nouveau **groupe de sécurité** et **renommez-le**. Autorisez les entrées suivantes. `SSH`, `HTTP`, `HTTS`.  Une fois terminé, cliquez sur **Vérifier et lancer**.
 
-![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-groups.png)
+![Amazon Web Service!](/assets/images/blog/blog-aws-ec2-tableau-de-bord-ami-4-goups.png)
 
 Vous retrouvez un **récapitulatif**  de toute la configuration de votre **instance EC2**. Passez à l’étape **Suivante : Lancer**.
 
@@ -81,24 +81,24 @@ Une fenêtre s’ouvre en vous indiquant tout ce dont vous avez besoin pour vous
 
 Ouvrez votre **terminal**. 
 
-Votre clé ne doit pas être visible publiquement pour que SSH fonctionne. 
+Votre clé ne doit pas être visible publiquement pour que **SSH** fonctionne. 
 
 Utilisez cette commande :
 
 ```
-chmod 400 votre_paire_de_clés.pem
+$ chmod 400 votre_paire_de_clés.pem
 ```
 
 Puis connectez-vous en **SSH** :
 
 ```
-ssh -i "votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+$ ssh -i "votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 ```
 
 Si votre **paire de clés** est dans un dossier spécifique, indiquez le **PATH** complet. Par exemple :
 
 ```
-ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
+$ ssh -i "/Users/bastienclement/Documents/votre_paire_de_clés.pem" ubuntu@ec2-34-254-124-182.eu-west-1.compute.amazonaws.com
 ```
  
 Vous devez vous retrouver comme ci-dessous :
@@ -108,7 +108,7 @@ Vous devez vous retrouver comme ci-dessous :
 Commencez à mettre à jour **l’index des paquets** de votre serveur.
 
 ``` 
-sudo apt update
+$ sudo apt update
 ```
 
 Ensuite, installez le **serveur Nginx**.

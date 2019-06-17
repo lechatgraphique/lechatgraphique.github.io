@@ -9,12 +9,12 @@ description: ""
 
 Nous arrivons à la fin de ce didactitiel. 
 
-Récapitulation des différentes tâches que nous avons effectuées.
+**Récapitulation** des différentes tâches que nous avons effectuées.
 
-- Création d'un compte Amazon Web Services
-- Création d'une base de données avec Amazon RDS
-- Création d'une instance Amazon EC2
-- Configuration SSL Nginx
+- Création d'un compte **Amazon Web Services**
+- Création d'une **base de données** avec **Amazon RDS**
+- Création d'une **instance Amazon EC2**
+- Configuration **SSL Nginx**
 
 Maintenant nous allons **installer WordPress** sur notre **instance EC2**.
 
@@ -25,7 +25,7 @@ cd /tmp
 wget https://wordpress.org/latest.tar.gz
 ```
 
-Une fois le téléchargement terminé, extrayez l’archive WordPress et déplacez les fichiers extraits dans le répertoire racine :
+Une fois le téléchargement terminé, extrayez l’archive **WordPress** et déplacez les fichiers extraits dans le **répertoire racine** :
 
 
 ```
