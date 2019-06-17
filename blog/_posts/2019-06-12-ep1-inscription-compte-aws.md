@@ -45,4 +45,4 @@ Ces options intéressent surtout les entreprises qui ont besoin de joindre quelq
 **Vous pouvez retrouver l’intégralité des offres gratuites AWS sur ce lien :**
 [Offre gratuite d’AWS](https://aws.amazon.com/fr/free/free-tier/) 
 
-Nous allons voir dans la prochaine étape la création d’une **instance EC2** afin d’y installer la **Stack « LEMP »** `Linux`, `Nginx`, `MySQL`, `PHP`.
+Nous allons voir dans la prochaine étape la création d’une **base de données** avec **Amazon RDS**.
