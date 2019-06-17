@@ -31,7 +31,7 @@
         </time>
     </div>
     <div style="text-align:justify;">
-        <p>Afin de sécuriser votre site avec un <strong>Certificat SSL</strong>, vous devez disposez d’un <strong>nom de domaine</strong> entièrement enregistré. J’utiliserai <strong>example.com</strong> tout au long de ce didacticiel.</p>
+        <p>Afin de sécuriser votre site avec un <strong>Certificat SSL</strong>, vous devez disposer d’un <strong>nom de domaine</strong> entièrement enregistré. J’utiliserai <strong>example.com</strong> tout au long de ce didacticiel.</p>
 
 <p>Vous devez avoir les <strong>deux enregistrements DNS</strong> et configurés pour votre serveur.</p>
 
@@ -40,7 +40,7 @@
   <li>Un <strong>enregistrement A</strong> avec <strong>www.example.com</strong> pointant sur l’adresse <strong>IP publique</strong> de votre serveur.</li>
 </ul>
 
-<p>L’étape qui suis sera l’installation de <strong>Let’s Encrypt</strong> pour obtenir un <strong>certificat SSL</strong>. Dans notre cas nous utiliserons un logiciel <strong>Certbot</strong> sur votre serveur.</p>
+<p>L’étape qui suit sera l’installation de <strong>Let’s Encrypt</strong> pour obtenir un <strong>certificat SSL</strong>. Dans notre cas nous utiliserons un logiciel <strong>Certbot</strong> sur votre serveur.</p>
 
 <p><strong>Certbot</strong> est en développement très actif. Les développeurs de <strong>Certbot</strong> conservent un référentiel de logiciels Ubuntu avec des versions à jour, nous allons donc utiliser ce référentiel.</p>
 
@@ -88,7 +88,7 @@ Installez le paquet <strong>Nginx</strong> de <strong>Certbot</strong>.</p>
 </code></pre></div></div>
 
 <p>Recherchez la ligne existante <code class="highlighter-rouge">server_name</code>.
-Mettez-le à jour pour qu’il corresponde à votre nom de domaine.</p>
+Mettez-la à jour pour qu’elle corresponde à votre nom de domaine.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server_name example.com www.example.com;
 </code></pre></div></div>
@@ -138,7 +138,7 @@ Select the appropriate number [1-2] then [enter] (press 'c' to cancel):
 
 <p>Sélectionnez votre choix puis appuyez sur <code class="highlighter-rouge">ENTRER</code>. La configuration sera mise à jour et <strong>Nginx</strong> se rechargera pour récupérer les nouveaux paramètres. <strong>Certbot</strong> se terminera par un message vous informant que le processus a abouti et où vos certificats sont stockés.</p>
 
-<p>Les certificats de <strong>Let’s Encrypt</strong> ne sont valides que pendant <strong>90 jours</strong>. Cela encourage les utilisateurs à automatiser leur processus de renouvellement des certificats. Le paquet <strong>Certbot</strong> que nous avons installé s’occupe de cela en ajoutant un <strong>scripT de renouvellement</strong> à /etc/cron.d. Ce script s’exécute deux fois par jour et renouvellera automatiquement tout certificat dans les trente jours suivant l’expiration.</p>
+<p>Les certificats de <strong>Let’s Encrypt</strong> ne sont valides que pendant <strong>90 jours</strong>. Cela encourage les utilisateurs à automatiser leur processus de renouvellement des certificats. Le paquet <strong>Certbot</strong> que nous avons installé s’occupe de cela en ajoutant un <strong>script de renouvellement</strong> à /etc/cron.d. Ce script s’exécute deux fois par jour et renouvellera automatiquement tout certificat dans les trente jours suivant l’expiration.</p>
 
 <p>Pour tester le processus de renouvellement, vous pouvez effectuer un essai à blanc avec <strong>Certbot</strong> :</p>
 
